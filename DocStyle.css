@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    background: #000;
+    min-height: 200vh;
+}
+hr
+{
+    height: 2px;
+    background-color: dimgray;
+    border: none;
+}
+
+/* ########## Header ########## */
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+header.sticky
+{
+    padding: 5px 100px;
+    background: #fff;
+    opacity: 80%;
+}
+header .logo
+{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a 
+{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+
+    padding: 5px 15px; 
+    border-style: solid; 
+    border-color: #fff; 
+    border-width: 2px;
+}
+header.sticky .logo
+{
+    color: #000;
+}
+header.sticky ul li a
+{
+    color: #000;
+    padding: 1px 15px; 
+    border-style: solid; 
+    border-color: #000; 
+    border-width: 2px;
+}
+
+/* ########## Banner ########## */
+.banner
+{
+    display: block;
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(Image/Background.jpg);
+    background-size: cover;
+    
+    padding-top: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.banner-title
+{
+    font-size: 300%;
+}
+.banner-under-title
+{
+    padding-bottom: 20px;
+    font-size: 150%;
+}
+.b-spacer-1
+{
+    height: 30px;
+}
+.b-spacer-2
+{
+    height: 10px;
+}
+
+/* ########## Social media Top ########## */
+.social-media-top
+{
+    position: relative;
+    padding: 0 15px;
+    font-size: 48px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.social-media-top ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-media-top ul li
+{
+    position: relative;
+    list-style: none;
+}
+.social-media-top ul li a
+{
+    position: relative;
+    margin: 0 15px;
+    font-size: 48px;
+    color: #fff;
+}
+.social-media-icons-top
+{
+    display: flex;
+    justify-content: center;
+    padding: 50px 50px;
+    font-size: 48px;
+}
+
+/* ########## Portfolio ########## */
+.portfolio
+{
+    position: relative;
+    font-size: 70%;
+    
+    justify-content: center;
+    align-items: baseline;
+}
+.white-ct
+{
+    font-size: 200%;
+    padding-top: 20px;
+    padding-left: 30px;
+    color: #fff;
+}
+.container-ct
+{
+    padding: 20px 200px;
+}
+.container-p
+{
+    display: block;
+    color: dimgrey;
+    padding: 20px 250px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.portfolio .spacer-1
+{
+    height: 20px;
+}
+
+/* ########## Game Info ########## */
+.game-info ul
+{
+    position: relative;    
+    display: flex;
+}
+.game-info ul li
+{
+    position: relative;
+    list-style: none;
+    color: dimgrey;
+}
+.game-info ul li a
+{
+    position: relative;
+    margin: 0 15px;
+}
+/* ########## Additional Info ########## */
+.ai
+{
+    padding: 20px;
+    display: block;
+}
+
+/* ########## Text Info ########## */
+.text-info
+{
+    text-align: center;
+}
+.text-info ul li
+{
+    position: relative;
+    list-style: none;
+    color: dimgrey;
+}
+
+/* ########## sst ########## */
+.container-sst ul
+{
+    position: relative;    
+    display: flex;
+}
+.container-sst ul li
+{
+    position: relative;
+    list-style: none;
+    color: dimgrey;
+}
+.container-sst ul li a
+{
+    position: relative;
+    margin: 0 15px;
+}
+
+.portfolio-skills-software-tools
+{
+    background-color: #fff;
+}
+.sst 
+{
+    justify-content: center;
+    align-items: baseline;
+    color: dimgrey;
+    padding: 50px;
+}
+.sst .box
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.content-title_sst
+{
+    font-size: 200%;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    color: #000;
+}
+
+/* ########## About me ########## */
+.aboutme
+{
+    background-color: #fff;
+}
+.am-photo
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.content-title_aboutme
+{
+    font-size: 200%;
+    color: #000;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* ########## Contact me ########## */
+.contactme
+{
+    text-align: center;
+    color: #000;
+}
+
+/* ########## Social media Bottom ########## */
+.social-media-top
+{
+    position: relative;
+    padding: 0 15px;
+    font-size: 48px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.social-media-bottom ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-media-bottom ul li
+{
+    position: relative;
+    list-style: none;
+}
+.social-media-bottom ul li a
+{
+    position: relative;
+    margin: 0 15px;
+    font-size: 48px;
+    color: #000;
+}
+.social-media-icons-bottom
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 100px;
+    font-size: 48px;
+}
+
+/* Pour les écrans de petite taille (téléphones mobiles, par exemple) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .banner-title {
+        font-size: 150%;
+    }
+
+    .banner-under-title {
+        font-size: 100%;
+    }
+
+    .social-media-top {
+        font-size: 24px;
+    }
+
+    .portfolio {
+        font-size: 50%;
+    }
+
+    .container-p,
+    .container-ct {
+        padding: 15px;
+    }
+
+    .sst {
+        padding: 20px;
+    }
+
+    .content-title_sst,
+    .content-title_aboutme {
+        font-size: 120%;
+    }
+
+    .social-media-bottom ul li a {
+        font-size: 36px;
+    }
+}
