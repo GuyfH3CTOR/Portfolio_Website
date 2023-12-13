@@ -179,6 +179,7 @@ header.sticky ul li a
 .container-ct
 {
     padding: 20px 200px;
+    max-width: 200px;
 }
 .container-p
 {
@@ -188,6 +189,7 @@ header.sticky ul li a
     align-items: center;
     justify-content: center;
     justify-items: center;
+    max-width: 200px;
 }
 .portfolio .spacer-1
 {

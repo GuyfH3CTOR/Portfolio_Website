@@ -169,6 +169,12 @@ header.sticky ul li a
     justify-content: center;
     align-items: baseline;
 }
+.portfolio-center
+{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
 .white-ct
 {
     font-size: 200%;
@@ -178,18 +184,18 @@ header.sticky ul li a
 }
 .container-ct
 {
-    padding: 20px 200px;
+    max-width: 1000px;
 }
 .container-p
 {
     display: block;
     color: dimgrey;
-    padding: 20px 250px;
     align-items: center;
     justify-content: center;
     justify-items: center;
+    max-width: 1000px;
 }
-.portfolio .spacer-1
+.spacer-1
 {
     height: 20px;
 }
@@ -276,6 +282,11 @@ header.sticky ul li a
 .aboutme
 {
     background-color: #fff;
+}
+.aboutme-center
+{
+    display: flex;
+    justify-content: center;
 }
 .am-photo
 {
