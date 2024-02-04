@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300,700&display=swap');
 @import url('https://use.typekit.net/hem3gda.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
 *
 {
     margin: 0;
@@ -11,8 +12,8 @@ body
 {
     background: #000;
 
-    font-family: "quicksand", sans-serif;    
-    font-weight: 400;
+    font-family: "Roboto", sans-serif;    
+    font-weight: 300;
     font-style: normal;
 }
 hr
