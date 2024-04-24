@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================================ TABS ================================ */
+
+.container{
+    width: 30.63em;
+    height: 100%;
+    background-color: #25252f;
+    color: var(--smoke);
+    border-radius: .83em;
+    flex-direction: column;
+    padding-top: 1.11em;
+    display: flex;
+    position: relative;
+}
+
+.section{
+    width: 100%;
+    max-width: 98.68em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 3.33em 2.22em;
+    display: flex;
+}
+
