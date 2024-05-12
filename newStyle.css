@@ -7,23 +7,40 @@
     box-sizing: border-box;
 }
 
-/* ================================ TABS ================================ */
-
-.container{
-    width: 30.63em;
-    height: 100%;
-    background-color: #25252f;
+.body{
     color: var(--smoke);
-    border-radius: .83em;
-    flex-direction: column;
-    padding-top: 1.11em;
-    display: flex;
-    position: relative;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-family: Greycliffcf, sans-serif;
+    font-size: .9vw;
+    font-weight: 700;
+    line-height: 1.2;
+
+    min-height: 100%;
+    margin: 0;
+    display: block;
+    
+    background: url(Image\SpaceGrid.jpg);
 }
 
+/* ================================ TABS ================================ */
+
 .section{
+    min-height: 100vh;
+    /* background-color: var(--dark-black); */
+
+    outline-offset: 0px;
+    outline: 0 #c4c4c4;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+}
+
+.container{
     width: 100%;
-    max-width: 98.68em;
+    /* max-width: 98.68em; */
+    max-width: 60%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -33,3 +50,59 @@
     display: flex;
 }
 
+.main-grid{
+    width: 100%;
+
+    grid-auto-columns: 1fr;
+    display: grid;
+
+    grid-column-gap: .8em;
+    grid-row-gap: 1.11em;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+.main-grid_column{
+    flex-direction: column;
+    display: flex;
+}
+
+.device{
+    width: 33,33333333333333%;
+    height: 35em;
+    background-color: #d95763;
+    flex-direction: column;
+    padding-top: 1.11em;
+    display: flex;
+    position: relative;
+
+    font-size: .9vw;
+}
+
+/* ================================ First Column ================================ */
+.name_section{
+    padding-left: 1.11em;
+    padding-right: 1.11em;
+    display: flex;
+}
+
+.name_logo{
+    color: var(--smoke);
+    width: 1.3em;
+    height: 1.3em;
+}
+
+.name{
+    padding-left: 1.11em;
+
+    font-family: SpaceGrotesk, sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #1c1c25;
+}
+
+/* ================================ media ================================ */
+
+/* @media only screen and (min-width: 1440px){
+    font-size: 13px;
+} */
