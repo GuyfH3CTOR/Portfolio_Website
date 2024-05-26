@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300,700&display=swap');
+@import url('https://use.typekit.net/hem3gda.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* TABS Basic */
+@import url("https://use.typekit.net/ovt6ynt.css");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Spectral:wght@200;300;400;500;600;700;800&display=swap");
+
+@-webkit-keyframes MOVE-BG {
+    from {
+        background-position: 0% 0%
+    }
+    to { 
+        background-position: 187% 0%
+    }
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ########## Header ########## */
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+header.sticky
+{
+    padding: 15px 100px;
+
+    background: #d95763;
+    opacity: 100%;
+    transition: 0.6s;
+}
+header .logo
+{
+    font-family: SpaceGrotesk, sans-serif;
+    font-weight: 700;
+
+    position: relative;
+    color: #3c3c4d;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a 
+{
+    font-family: SpaceGrotesk, sans-serif;
+    font-weight: 500;
+
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #3c3c4d;
+    letter-spacing: 2px;
+    transition: 0.6s;
+
+    padding: 5px 15px; 
+    border-style: solid; 
+    border-color: #3c3c4d;
+    border-width: 2px;
+}
+header.sticky .logo
+{
+    font-family: SpaceGrotesk, sans-serif;
+    font-weight: 700;
+
+    color: #101016;
+}
+header.sticky ul li a
+{
+    font-family: SpaceGrotesk, sans-serif;
+    font-weight: 500;
+
+    color: #101016;
+    padding: 1px 15px; 
+    border-style: solid; 
+    border-color: #101016; 
+    border-width: 2px;
+}
+
+/* ########## Banner ########## */
+
+.banner
+{
+    color: #d95763;
+    display: block;
+
+    width: 100%;
+    height: 95vh;
+    background-size: cover;
+}
+.banner-title
+{
+    font-size: 300%;
+}
+.banner-under-title
+{
+    padding-bottom: 20px;
+    font-size: 150%;
+}
+.banner-center-vertical
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+/* ================================ HAZARD BAND ================================ */
+
+.hazard-background
+{
+    display: block;
+    
+    width: 100%;
+    height: 10vh;
+    background-size: 50px;
+    
+    background-image: url(Aseprite/HazardBand.jpg);
+
+    background-repeat: repeat-x;
+    background-position: right top;
+    
+    -webkit-animation-name: MOVE-BG;
+    -webkit-animation-duration: 100s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+/* ================================ Section ================================ */
+
+.section_title-Top{
+    background-color: #3c3c4d;
+    position: top;
+
+    width: 100%;
+    height: 1vh;
+}
+.section_title-background{
+    background-color: #25252f;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+}
+.section_title-Bottom{
+    background-color: #1c1c25;
+    position: relative bottom;
+
+    width: 100%;
+    height: 1vh;
+}
+.section_title-text_background{
+    background-color: #1c1c25;
+    
+    padding: 10px;
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+}
+.section_title-logo_Portfolio{
+    background-image: url(Aseprite/PortofolioLogo.jpg);
+    background-size: contain;
+
+    aspect-ratio : 1 / 1;
+    height: auto;
+
+    display : flex;
+    align-items : center;
+}
+.section_title-text{
+    font-family: SpaceGrotesk, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+
+    margin-left: 10px;
+    display : flex;
+    align-items : center;
+
+    color: #c4c4c4;
+}
+
+.section-grid{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 50px;
+
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+
+    align-items: center;
+}
+
+.section-grid-card{
+    background-color: #d95763;
+
+    width: 340px;
+    height: 80vh;
+}
+
+/* ========================================================================== */
+
+body
+{
+    background: #000;
+
+    font-family: "Roboto", sans-serif;    
+    font-weight: 300;
+    font-style: normal;
+}
+hr
+{
+    height: 2px;
+    background-color: dimgray;
+    border: none;
+}
+
+/* ########## Ui Cadrage ########## */
+.margin
+{
+    margin: 50px;
+}
+.margin-center
+{    
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: auto;
+}
+.margin_top_bottom
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.margin_left_right
+{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.margin-left
+{
+    margin-left: 50px;
+}
+.padding_top_bottom
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.horizontal_layout
+{
+    display: flex;    
+    max-width: 1500px;
+}
+.center
+{    
+    position: relative;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+.centered_element
+{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+
+    max-width: 1400px;
+}
+.spacer-1
+{
+    margin: 20px;
+    white-space: 50px;
+}
+
+/* ########## Ui Style ########## */
+.dark-pressed
+{
+    padding: 40px;
+    max-width: 1200px;
+
+    border-radius: 100px;
+    background: #1c1c1c;
+    box-shadow: inset 33px 33px 66px #0b0b0b, inset -33px -33px 66px #2d2d2d;
+}
+.white-pressed
+{
+    padding: 40px;
+    max-width: 1200px;
+
+    border-radius: 100px;
+    background: #ffffff;
+    box-shadow: inset 11px 11px 22px #b3b3b3, inset -11px -11px 22px #ffffff;
+}
+.wide-dark-flat
+{
+    max-width: 1200px;
+    padding: 40px;
+
+    border-radius: 60px;
+    background: #1c1c1c;
+    box-shadow:  20px 20px 60px #0b0b0b, -20px -20px 60px #2d2d2d;
+}
+.wide-white-flat
+{
+    max-width: 1200px;
+    padding: 40px;
+
+    border-radius: 70px;
+    background: #ffffff;
+    box-shadow:  10px 10px 30px #a8a8a8, -10px -10px 30px #ffffff;
+}
+.round_box-small-white
+{
+    vertical-align: top;
+    font-size: 0;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow:  2.5px 2.5px 7.5px #a8a8a8, -2.5px -2.5px 7.5px #ffffff;
+}
+.round_box-small-dark
+{
+    vertical-align: top;
+    font-size: 0;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow:  2.5 2.5 7.5px #0b0b0b, -2.5 -2.5 7.5px #2d2d2d;
+}
+
+/* ########## background Style ########## */
+.white_background
+{
+    background: #ffffff;
+}
+
+/* ########## Text Style ########## */
+.Title-0-white
+{
+    color: #353535;
+    font-size: 8em;
+    
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    text-shadow: inset 33px 33px 66px #0b0b0b, inset -33px -33px 66px #2d2d2d;
+    position: relative;
+}
+.Title-1-white
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+
+    font-size: 25px;
+    background: -webkit-linear-gradient(#eee, #cccccc7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Title-1-dark
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000000;
+    
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+
+    font-size: 25px;
+    background: -webkit-linear-gradient(#000000, #3030307e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Title-1-blue
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000000;
+    
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+
+    font-size: 40px;
+    background: -webkit-linear-gradient(#01312b, #00ffc8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Title-1-orange_white
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000000;
+    
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+
+    font-size: 30px;
+    background: -webkit-linear-gradient(#f55723, #fff68c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Title-1-red_orange
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000000;
+    
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+
+    font-size: 35px;
+    background: -webkit-linear-gradient(#fc5aa0, #fca65b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Title-2-white
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+
+    font-size: 20px;
+    background: -webkit-linear-gradient(#ffffff, #cccccc7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Title-2-dark
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #272727;
+    
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+
+    font-size: 20px;
+    background: -webkit-linear-gradient(#272727, #6b6b6b7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.white_font
+{
+    color: #ffffff;
+}
+.dark_font
+{
+    color: #272727;
+}
+
+/* ########## Text size ########## */
+.font-center
+{
+    text-align: center;
+}
+
+/* ########## Text size ########## */
+.font-verybig
+{
+    font-size: 50px;
+}
+.font-big
+{
+    font-size: 30px;
+}
+.font-medium
+{
+    font-size: 15px;
+}
+.font-small
+{
+    font-size: 12px;
+}
+
+/* ########## Social media Top ########## */
+.social-media-top
+{
+    position: relative;
+    padding: 0 15px;
+    font-size: 48px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.social-media-top ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-media-top ul li
+{
+    position: relative;
+    list-style: none;
+}
+.social-media-top ul li a
+{
+    position: relative;
+    margin: 0 15px;
+    font-size: 48px;
+    color: #fff;
+}
+.social-media-icons-top
+{
+    display: flex;
+    justify-content: center;
+    padding: 50px 50px;
+    font-size: 48px;
+}
+
+/* ########## Text Info ########## */
+.text-info
+{
+    text-align: center;
+}
+.text-info ul li
+{
+    position: relative;
+    list-style: none;
+    color: rgb(168, 168, 168);
+}
+
+/* ########## Contact me ########## */
+.contactme
+{
+    text-align: center;
+    color: #000;
+}
+
+/* ########## Social media Bottom ########## */
+.social-media-top
+{
+    position: relative;
+    padding: 0 15px;
+    font-size: 48px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.social-media-bottom ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-media-bottom ul li
+{
+    position: relative;
+    list-style: none;
+}
+.social-media-bottom ul li a
+{
+    position: relative;
+    margin: 0 15px;
+    font-size: 48px;
+    color: #000;
+}
+.social-media-icons-bottom
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 100px;
+    font-size: 48px;
+}
+
+/* ########## Card style ########## */
+
+.card 
+{
+    /* background: #ffffff; */
+    border: none;
+    /* box-shadow: 5px 5px 10px rgba(163,177,198,0.5), -5px -5px 10px rgba(255, 255, 255, 0.6); */
+    /* border-radius: 15px; */
+}
+.card-header 
+{
+    box-shadow: 0px 1px 2px  rgba(163,177,198,0.5);
+    border-radius: 15px 15px 0px 0px;
+    padding: 10px;
+    height: 40px;
+}
+.card-body 
+{
+    padding: 10px;
+    border-radius: 0px 0px 15px 15px;
+
+}
