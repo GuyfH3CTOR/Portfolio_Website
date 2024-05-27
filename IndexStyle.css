@@ -158,6 +158,10 @@ header.sticky ul li a
 
 /* ================================ Section ================================ */
 
+.section_title{
+    margin-left: 20vh;
+    margin-right: 20vh;
+}
 .section_title-Top{
     background-color: #3c3c4d;
     position: top;
