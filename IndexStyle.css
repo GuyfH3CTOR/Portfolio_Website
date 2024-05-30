@@ -273,7 +273,7 @@ header.sticky ul li a
 
 /* ================================ ABOUT ME ================================ */
 
-.about_me-text{
+.section-about_me{
     margin-top: 5vh;
     margin-bottom: 5vh;
 
@@ -286,6 +286,12 @@ header.sticky ul li a
     text-align: justify;
 
     line-height: 20px;
+
+    display: flex;
+}
+
+.about_me-text{
+    margin-left: 10vh;
 }
 
 .p{
