@@ -34,6 +34,7 @@ body
 
     /* position: absolute; */
     overflow-x: hidden;
+    position: absolute;
 }
 
 /* ########## Header ########## */
@@ -478,6 +479,8 @@ header.sticky ul li a
     height: 80px;
 
     padding: 15px;
+
+    position: relative;
 }
 
 .my_skill_set-category-title-front{
@@ -599,8 +602,8 @@ header.sticky ul li a
 
 .screw{
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
 
     background-color: #3c3c4d;
 }
