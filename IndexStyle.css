@@ -197,8 +197,7 @@ header.sticky ul li a
 /* ================================ Section ================================ */
 
 .section_title{
-    margin-left: 20vh;
-    margin-right: 20vh;
+    
 }
 .section_title-Top{
     background-color: #3c3c4d;
@@ -265,10 +264,17 @@ header.sticky ul li a
     margin-top: 5vh;
     margin-bottom: 5vh;
 
-    margin-left: 20vh;
-    margin-right: 20vh;
+    padding-left: 20px;
+    padding-right: 20px;
 
     flex: 0 1 33,33333333333333%;
+}
+
+.section_size{
+    width: 1500px;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ================================ ABOUT ME ================================ */
@@ -277,8 +283,8 @@ header.sticky ul li a
     margin-top: 5vh;
     margin-bottom: 5vh;
 
-    margin-left: 30vh;
-    margin-right: 30vh;
+    padding-left: 50px;
+    padding-right: 50px;
 
     font-family: SpaceGrotesk, sans-serif;
     font-weight: 100;
@@ -433,9 +439,6 @@ header.sticky ul li a
 .section-my_skill_set{
     margin-top: 5vh;
     margin-bottom: 5vh;
-
-    margin-left: 25vh;
-    margin-right: 25vh;
 
     font-family: SpaceGrotesk, sans-serif;
     font-weight: 100;
