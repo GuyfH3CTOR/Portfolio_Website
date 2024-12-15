@@ -55,7 +55,7 @@ header.sticky
 {
     padding: 15px 100px;
 
-    background: #d95763;
+    background: #6487fa;
     opacity: 100%;
     transition: 0.6s;
 }
@@ -127,7 +127,7 @@ header.sticky ul li a
 
 .banner
 {
-    color: #d95763;
+    color: #6487fa;
     display: block;
 
     width: 100%;
