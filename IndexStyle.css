@@ -625,3 +625,152 @@ header.sticky ul li a
     right: 5px;
     bottom: 5px;
 }
+
+/* Responsive & Fluid improvements (added) */
+
+/* Use fluid type with clamp for main text sizes */
+:root{
+    --space: 1.25rem;
+    --max-content-width: 1500px;
+}
+
+/* Fluid typography examples */
+.banner-title { font-size: clamp(1.6rem, 4vw, 3rem); }
+.banner-under-title { font-size: clamp(1rem, 2.2vw, 1.5rem); }
+.font-verybig { font-size: clamp(2rem, 5vw, 3.125rem); }
+.font-big     { font-size: clamp(1.2rem, 3vw, 1.875rem); }
+.font-medium  { font-size: clamp(.9rem, 1.6vw, 1rem); }
+.font-small   { font-size: clamp(.75rem, 1.2vw, .9rem); }
+
+/* Make containers fluid but constrained */
+.section_size{
+    width: 100%;
+    max-width: var(--max-content-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+/* Fix section-grid flex shorthand and use gap (grid-gap is deprecated) */
+.section-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* children default to 3 columns — can be overridden by media queries */
+    align-items: stretch;
+}
+
+/* Make cards responsive */
+.section-grid-card{
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Card inner heights should be flexible */
+.section-grid-card_middle{
+    padding: 20px;
+    height: auto;
+}
+
+/* Header: fluid padding using clamp */
+header{
+    padding: clamp(12px, 3.5vw, 40px) clamp(12px, 5vw, 100px);
+}
+
+/* Sticky header smaller */
+header.sticky{
+    padding: clamp(8px, 1.8vw, 15px) clamp(12px, 4vw, 100px);
+}
+
+/* Video responsive */
+#myVideo {
+    width: 100%;
+    height: clamp(120px, 18vw, 190px);
+    object-fit: cover;
+    z-index: -100;
+    margin-bottom: -5px;
+}
+
+/* Work item tags and small elements scale */
+.work-item-tag {
+    font-size: clamp(.65rem, 1.2vw, .875rem);
+    padding: .25rem .5rem;
+}
+
+/* About / skill / contact -- allow wrapping and stack on small screens */
+.section-about_me,
+.section-my_skill_set,
+.section-contact-backgroud-middle {
+    flex-wrap: wrap;
+}
+
+/* Contact cards scale */
+.contact-back{
+    width: 100px;
+    max-width: 140px;
+    height: auto;
+    padding: 12px;
+}
+
+/* Utility: make images and media responsive */
+img, video, .card-media > * { max-width: 100%; height: auto; }
+
+/* ===== Breakpoints ===== */
+
+/* Large tablets / small desktops */
+@media (max-width: 1200px) {
+    .section-grid-card { max-width: 380px; }
+    header { padding-left: 4vw; padding-right: 4vw; }
+    header ul li a { margin: 0 12px; padding: 4px 12px; }
+    .section-grid { gap: 4vh; }
+}
+
+/* Tablets / landscape phones: 2 column layout */
+@media (max-width: 900px) {
+    .section-grid > * {
+        flex: 1 1 calc(50% - 2rem); /* 2 columns */
+    }
+    .section-about_me { flex-direction: column; gap: 1rem; }
+    .section-my_skill_set { flex-direction: column; gap: 1rem; }
+    .section-contact-backgroud-middle { flex-direction: column; gap: 1rem; }
+    .section_size { padding-left: 1rem; padding-right: 1rem; }
+}
+
+/* Small phones: single column, hide long nav or stack it */
+@media (max-width: 600px) {
+    header {
+        padding: 12px 14px;
+    }
+    header ul {
+        display: none; /* replace with a mobile nav / hamburger in HTML/JS if desired */
+    }
+    .banner-center-vertical { padding: 0 1rem; }
+    .section-grid > * {
+        flex: 1 1 100%; /* single column */
+    }
+    .section-grid-card { max-width: 100%; }
+    .card-title { font-size: clamp(1rem, 4vw, 1.5rem); }
+    .section_size { padding-left: .75rem; padding-right: .75rem; }
+}
+
+/* Very small devices */
+@media (max-width: 420px) {
+    .banner-title { font-size: clamp(1.25rem, 6.5vw, 1.8rem); }
+    .work-item-tag { font-size: .65rem; padding: .2rem .4rem; }
+    .contact-image { width: 70%; }
+}
+
+/* Accessibility / touch target improvements */
+@media (hover: none) {
+    header ul li a { padding: .6rem 1rem; }
+}
