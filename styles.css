@@ -1,0 +1,385 @@
+/* styles.css
+   Styles inspired by the minimalist dark portfolio layout (hero-centered, subtle glass cards, cyan accent).
+   Works with the provided indexNew.html structure.
+*/
+
+/* Import a clean system font stack with a Google fallback */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+
+:root {
+    --dark-black: #1c1c25;
+    --smoke: #c4c4c4;
+    --blue: #2a4bb3;
+    --medium-black: #25252f;
+    --black: #101016;
+    --soft-black: #3b3b44;
+    --dark-blue: #213e9a;
+    --black-blue: #1f367e;
+    --dark-red: #95234c;
+    --dark-yellow: #b58622;
+    --dark-purple: #4548a9;
+    --red: #e72a6e;
+    --yellow: #ecb236;
+    --white-smoke: #f7efdd;
+    --purple: #7174db;
+    --green: #44ac9e;
+    --dark-green: #267267;
+    --light-blue: #536cbb;
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-text-size-adjust:100%;
+  line-height:1.45;
+  scroll-behavior:smooth;
+
+  /* Background */
+  background-color: rgb(28, 28, 37);
+  background-image: radial-gradient(circle, rgba(229, 229, 229, 0.03) 20%, transparent 10%), radial-gradient(circle, rgba(229, 229, 229, 0.03) 20%, transparent 10%);
+  background-size: 1em 1em;
+  background-position: 50% 50%;
+
+  /* Fonts */
+  font-family: Roboto, sans-serif;
+  color: var(--white-smoke);
+  
+  /* Layout: stack children and center them horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* =================================================================================== */
+
+.header{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* shrink-to-fit width so header only as wide as its content */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  /* max-width: 95%; */
+
+  /* internal spacing — adjust as needed */
+  /* padding: 1rem 1.5rem; */
+
+  background-color: var(--blue);
+  border-radius: .83em;
+  box-shadow: 0px 0px 30px 5px var(--black);
+
+  /* center the shrink-to-fit header */
+  margin: 5rem auto 0;
+  text-align: center;
+}
+
+/* Header parts */
+.header .name{
+  display: flex;
+  margin:15px 18px 14px;
+  width: 20rem;
+
+  align-items: center;
+  justify-content: center;  
+}
+
+.header .name .text{
+  width: 15rem;
+
+  color:var(--white-smoke);
+  font-family: Roboto, sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: clamp(1rem, 2.6vw, 1.25rem);
+}
+
+.header .name .device-dots__img {
+    object-fit: contain;
+    width: 4.2em;
+    height: 1.2em;
+}
+
+/* Tabs container and tab items */
+.header .tabs{
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  gap: .5rem;
+
+  background-color: var(--dark-blue);
+  padding: 1rem;
+}
+
+.header .contact{
+  display: inline-flex;
+  margin: 0.6rem;
+}
+
+.header .tabs button{
+  display: inline-flex;
+  height: 3rem;
+  width: 10rem;
+
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  background: var(--blue);
+  border-radius:5px;
+  border-width: 0;
+
+  color:var(--white-smoke);
+  text-decoration:none;
+  font-weight: 800;
+
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.header .tabs button:hover{
+  background: var(--black-blue);
+}
+
+.small-screws {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 3rem;
+}
+.small-screw-blue {
+    border-radius: 100%;
+    width: .54em;
+    min-width: .54em;
+    height: .54em;
+    min-height: .54em;
+    background-color: var(--black-blue);
+}
+
+.header .contact{
+  height: 3.8rem;
+  width: 8rem;
+
+  margin-top: .6rem;
+  margin-bottom: .6rem;
+  margin-left: .6rem;
+  margin-right: .6rem;
+
+  padding: .5rem;
+
+  background-color: var(--dark-blue);
+  border-radius: 5px;
+
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.header .contact button{
+  cursor: pointer;
+
+  height: 100%;
+  width: 100%;
+
+  text-decoration:none;
+  font-weight: 800;
+  color: var(--dark-green);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  
+  background-color: var(--green);
+  border: none;
+  border-radius: 5px;
+
+  box-shadow: 0px 10px 0px 0px var(--dark-green);
+  transform: translateY(-10px);
+
+  transition: box-shadow .1s ease, transform .1s ease;
+}
+
+.header .contact button:hover{
+  box-shadow: 0px 5px 0px 0px var(--dark-green);
+  transform: translateY(-5px);
+
+  transition: box-shadow .1s ease, transform .1s ease;
+}
+.header .contact button:active{
+  box-shadow: 0px 0px 0px 0px var(--dark-green);
+  transform: translateY(0px);
+
+  transition: box-shadow .1s ease, transform .1s ease;
+}
+
+/* =================================================================================== */
+
+.page{
+  width: 70rem;
+  height: 35rem;
+  border-width: 1rem;
+  border-color: var(--white-smoke);
+  gap: 1rem;
+}
+
+.device{
+  width: 100%;
+  height: 6rem;
+
+  padding: 1rem;
+
+  background: var(--medium-black);
+  border-radius: .83em;
+  box-shadow: 0px 0px 30px 5px var(--black);
+}
+
+.device .title{
+  display: inline-flex;
+  border: var(--white-smoke);
+  border-width: 1rem;
+
+  justify-content: space-between;
+
+  width: 100%;
+  height: 4rem;
+}
+.device .title .name{
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+
+  background-color: var(--dark-black);
+  border-radius: .5rem;
+
+  width: 100%;
+  height: 4rem;
+}
+.device .title .text{
+  width: max-content;
+
+  color:var(--white-smoke);
+  font-family: Roboto, sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: clamp(1rem, 2.6vw, 1.25rem);
+}
+
+.device .title .dot{
+    object-fit: contain;
+    width: 4rem;
+    height: 2rem;
+}
+
+.device .title .buttons{
+  display: inline-flex;
+  width: 11rem;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.device .title .buttons button{
+  cursor: pointer;
+
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+
+  width: 4rem;
+  height: 4rem;
+
+  text-decoration:none;
+  font-weight: 800;
+  color: var(--white-smoke);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  
+  background-color: var(--soft-black);
+  border: none;
+  border-radius: 100%;
+
+  box-shadow: 0px 5px 0px 0px var(--dark-black);
+  transform: translateY(-5px);
+
+  transition: box-shadow .1s ease, transform .1s ease;
+}
+
+.device .title .buttons button:hover{
+  box-shadow: 0px 2.5px 0px 0px var(--dark-black);
+  transform: translateY(-2.5px);
+
+  transition: box-shadow .1s ease, transform .1s ease;
+}
+.device .title .buttons button:active{
+  box-shadow: 0px 0px 0px 0px var(--dark-black);
+  transform: translateY(0px);
+
+  transition: box-shadow .1s ease, transform .1s ease;
+}
+
+/* =================================================================================== */
+
+.contentBackground{
+  background: var(--medium-black);
+  border-radius: .83em;
+  box-shadow: 0px 0px 30px 5px var(--black);
+}
+
+.content{
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.content .left{
+  width: 100%;
+  height: 100%;
+}
+
+.content .left .title{
+  width: 100%;
+  height: 20%;
+}
+
+.content .left .preview{
+  width: 100%;
+  height: 50%;
+  margin-top: 1rem;
+}
+
+.content .left .tags{
+  width: 100%;
+  height: 30%;
+  margin-top: 1rem;
+}
+
+.content .right{
+  width: 100%;
+  height: 100%;
+}
+
+.content .right .resume{
+  width: 100%;
+  height: 80%;
+}
+
+.content .right .link{
+  width: 100%;
+  height: 20%;
+  margin-top: 1rem;
+}
+
