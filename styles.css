@@ -233,7 +233,7 @@ html,body{
 
 .device{
   width: 100%;
-  height: 6rem;
+  height: fit-content;
 
   padding: 1rem;
 
@@ -346,25 +346,96 @@ html,body{
 }
 
 .content .left{
-  width: 100%;
+  width: 90rem;
   height: 100%;
-}
-
-.content .left .title{
-  width: 100%;
-  height: 20%;
 }
 
 .content .left .preview{
   width: 100%;
-  height: 50%;
+  height: fit-content;
+  padding: 1rem;
+}
+
+.preview_title{
+  width: 100%;
+  height: 4rem;
+  background-color: var(--dark-black);
+  border-radius: 5px;
+
+  align-items: center;
+  align-content: center;
+  padding-left: 1rem;
+
+  color:var(--white-smoke);
+  font-family: Roboto, sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: clamp(2rem, 2.6vw, 1.25rem);
+}
+
+.preview_screen{
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  border-radius: 5px;
+  padding: 1rem;
   margin-top: 1rem;
 }
 
-.content .left .tags{
+.preview_img{
   width: 100%;
-  height: 30%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.screen_grain{
+  opacity: 0.67;
+  mix-blend-mode: overlay;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+
+  content: "";
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://uploads-ssl.webflow.com/61ba0d8…/62a847d…_bg-noise.png);
+  animation: 0.2s infinite noise;
+  pointer-events: none;
+}
+
+.content .left .tags{
+  display: inline-flex;
+  width: 100%;
+  height: fit-content;
   margin-top: 1rem;
+  padding: 1rem;
+  gap: .25rem;
+  flex-wrap: wrap;
+}
+
+.tag{
+  display: inline-flex;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--dark-black);
+  padding: .3rem;
+  border-radius: 20px;
+
+  align-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.tag_dot{
+  height: .5rem;
+  width: .5rem;
+  background-color: var(--green);
+  border-radius: 100%;
 }
 
 .content .right{
@@ -381,5 +452,15 @@ html,body{
   width: 100%;
   height: 20%;
   margin-top: 1rem;
+}
+
+.screen__static-grain {
+  opacity: .67;
+  mix-blend-mode: overlay;
+  background-image: url(images/bg-noise.png);
+  background-position: 50%;
+  background-size: contain;
+  position: absolute;
+  inset: 0%;
 }
 
