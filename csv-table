@@ -1,0 +1,81 @@
+import csv
+from pathlib import Path
+import pytest
+
+CSV_FILENAME = Path(__file__).with_name("Projets Portfolio - Feuille 1.csv")
+
+EXPECTED_HEADERS = [
+    "Type de Projet",
+    "Name",
+    "Tags",
+    "description",
+    "Image name",
+    "Link",
+]
+
+def load_rows():
+    assert CSV_FILENAME.exists(), f"CSV file not found at {CSV_FILENAME}"
+    with CSV_FILENAME.open(newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+    return reader.fieldnames or [], rows
+
+def count_by_type(rows):
+    counts = {}
+    for r in rows:
+        t = (r.get("Type de Projet") or "").strip()
+        counts[t] = counts.get(t, 0) + 1
+    return counts
+
+def parse_tags_cell(cell):
+    if cell is None:
+        return []
+    parts = [p.strip() for p in cell.split(",")]
+    return [p for p in parts if p]
+
+def test_headers():
+    fieldnames, _ = load_rows()
+    assert fieldnames, "CSV has no header row"
+    # Ensure expected headers appear in the same order at the start
+    for i, expected in enumerate(EXPECTED_HEADERS):
+        assert i < len(fieldnames), f"Missing header: {expected}"
+        assert fieldnames[i] == expected, f"Header mismatch at position {i}: expected '{expected}', got '{fieldnames[i]}'"
+
+def test_counts_personnal_and_school():
+    _, rows = load_rows()
+    counts = count_by_type(rows)
+    # These expected counts come from the current CSV content
+    assert counts.get("Personnal", 0) == 3, f"Expected 3 'Personnal' rows, found {counts.get('Personnal',0)}"
+    assert counts.get("School", 0) == 7, f"Expected 7 'School' rows, found {counts.get('School',0)}"
+
+def test_unique_names():
+    _, rows = load_rows()
+    names = [(r.get("Name") or "").strip() for r in rows]
+    # Ensure no empty names
+    assert all(names), "One or more rows have empty 'Name' field"
+    assert len(set(names)) == len(names), "Duplicate project names found"
+
+def test_each_row_has_description_when_expected():
+    _, rows = load_rows()
+    for idx, r in enumerate(rows, start=1):
+        name = (r.get("Name") or "").strip()
+        desc = (r.get("description") or "").strip()
+        # Accept empty description only if explicitly empty in source; here we assert they are non-empty
+        assert desc, f"Row {idx} ('{name}') has empty description"
+
+def test_tags_parsable_and_trimmed():
+    _, rows = load_rows()
+    for idx, r in enumerate(rows, start=1):
+        raw = r.get("Tags")
+        tags = parse_tags_cell(raw)
+        # If raw cell is present and not empty, expect at least one parsed tag
+        if raw and raw.strip():
+            assert tags, f"Row {idx} has Tags cell but parsing returned no tags"
+            # ensure tags have no leading/trailing whitespace
+            for t in tags:
+                assert t == t.strip(), f"Tag not trimmed in row {idx}: '{t}'"
+
+def test_datamass_present():
+    _, rows = load_rows()
+    found = any("datamass" in (r.get("Name") or "").lower() for r in rows)
+    assert found, "Expected a project named 'Datamass' to be present in the CSV"
