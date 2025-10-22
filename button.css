@@ -38,6 +38,14 @@
   transition: box-shadow .1s ease, transform .1s ease;
 }
 
+.pushButton:disabled{
+  color: var(--dark-black);
+  background-color: var(--medium-black);
+  box-shadow: 0px 0px 0px 0px var(--dark-black);
+  transform: translateY(0px);
+  transition: all .1s ease;
+}
+
 /* =================================================================================== */
 
 /* Contact */
@@ -107,6 +115,11 @@
 }
 .linkButton:active{
   box-shadow: 0px 0px 0px 0px var(--dark-yellow);
+}
+.linkButton:disabled{
+  color: var(--dark-black);
+  background-color: var(--medium-black);
+  box-shadow: 0px 0px 0px 0px var(--dark-black);
 }
 
 /* =================================================================================== */
@@ -187,4 +200,53 @@
 }
 .page_explore:active{
   box-shadow: 0px 0px 0px 0px var(--dark-blue);
+}
+
+/* =================================================================================== */
+
+/* Pro */
+
+/* =================================================================================== */
+
+.proButton{
+    color: var(--dark-red);
+    background-color: var(--red);
+    border-radius: 5px;
+    box-shadow: 0px 10px 0px 0px var(--dark-red);
+    color: var(--dark-red);
+}
+
+.proButton:hover{
+  box-shadow: 0px 5px 0px 0px var(--dark-red);
+}
+.proButton:active{
+  box-shadow: 0px 0px 0px 0px var(--dark-red);
+}
+
+/* =================================================================================== */
+
+/* Preview */
+
+/* =================================================================================== */
+
+.preview_button{
+  width: 5rem;
+  height: 5rem;
+  color: var(--medium-black);
+  background-color: var(--soft-black);
+  border-radius: 100%;
+  box-shadow: 0px 10px 0px 0px var(--medium-black);
+  color: var(--medium-black);
+}
+
+.preview_button:hover{
+  box-shadow: 0px 5px 0px 0px var(--medium-black);
+}
+.preview_button:active{
+  box-shadow: 0px 0px 0px 0px var(--medium-black);
+}
+.preview_button:disabled{
+  color: var(--dark-black);
+  background-color: var(--medium-black);
+  box-shadow: 0px 0px 0px 0px var(--dark-black);
 }

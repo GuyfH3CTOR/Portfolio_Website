@@ -11,7 +11,7 @@
     <section class="header" role="banner">
         <div class="name">
             <div class="text">Hector Rameau</div>
-            <img src="image/device-dots.png" alt="" class="device-dots__img">
+            <img src="Image/device_dots.png" alt="" class="device-dots__img">
         </div>
 
         <!-- buttons must be children of .tabs -->
@@ -21,8 +21,8 @@
                 <div class="small-screw-blue"></div>
             </div>
             <button class="tablinks" onclick="openTab(event, 'Highlights')" id="defaultOpen">Highlights</button>
-            <button class="tablinks" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('portfolioPersonal.csv', 'DYSON SPHERE INITIATIVE')">Personal</button>
-            <button class="tablinks" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('portfolioPersonal.csv', 'Hellscape')">School</button>
+            <button class="tablinks" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('personal.csv', 'DYSON SPHERE INITIATIVE')">Personal</button>
+            <button class="tablinks" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('school.csv', 'Hellscape')">School</button>
             <button class="tablinks" onclick="openTab(event, 'Professional')">Professional</button>
             <button class="tablinks" onclick="openTab(event, 'About Me')">About Me</button>
 
@@ -42,7 +42,13 @@
     <!-- Pages -->
 
     <section class="pages">
+
+        <!-- #region Highlights -->
+
         <div id="Highlights" class="page tabcontent content-fit-height">
+
+            <!--  -->
+
             <div class="container-full tab_content_flex_row">
                 <div class="title center">
                     Darkest Night
@@ -58,15 +64,18 @@
                     <div class="tag"><div class="tag_dot"></div>game design</div>
                 </div>
                 <div class="container-dark">
-                    <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('portfolioPersonal.csv', 'Darkest Night')">Explore</button>
+                    <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('school.csv', 'Darkest Night')">Explore</button>
                 </div>
             </div>
+
+            <!--  -->
+
             <div class="container-full tab_content_flex_row">
                 <div class="title center">
                     Hellscape
                 </div>
                 <div class="preview-card">
-                    <img src="image/HellScape Menu.png" alt="" class="dot">
+                    <img src="Image/HellScape1.png" alt="" class="dot">
                 </div>
                 <div class="tags">
                     <div class="tag"><div class="tag_dot"></div>game Dev</div>
@@ -74,9 +83,12 @@
                     <div class="tag"><div class="tag_dot"></div>Unreal Blueprints</div>
                 </div>
                 <div class="container-dark">
-                    <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('portfolioPersonal.csv', 'Hellscape')">Explore</button>
+                    <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('school.csv', 'Hellscape')">Explore</button>
                 </div>
             </div>
+
+            <!--  -->
+
             <div class="container-full tab_content_flex_row">
                 <div class="title center">
                     Summoner's Clash
@@ -92,30 +104,51 @@
                     <div class="tag"><div class="tag_dot"></div>pixel art</div>
                 </div>
                 <div class="container-dark">
-                    <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('portfolioPersonal.csv', 'Summoner\'s Clash')">Explore</button>
+                    <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('personal.csv', 'Summoner\'s Clash')">Explore</button>
                 </div>
             </div>
+
+            <!--  -->
+            
         </div>
+        
+        <!-- #endregion Highlights -->
 
         <div id="ExploreProjects" class="page tabcontent tab_content_flex_column">
 
             <!-- page content -->
-            <div class="page_content">
+            <div class="page_content center content-max-height">
 
                 <!-- content title -->
-                <div class="container-full content-max-height">
+                <div class="container-full content_title">
                     <div id="title" class="title center">
-                        Summoner's Clash
+                        no title
                     </div>
-                    <div id="preview" class="preview-card">
-                        <!-- <video src="vidéo\Summoner's Clash by GuyfH3CTOR - Opera 2024-05-29 23-40-30.mp4"></video> -->
+                    <div class="preview center">
+                        <div class="container-dark">
+                            <button class="pushButton preview_button" disabled>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.29em" viewBox="0 0 23 20" fill="none">
+                                    <path d="M10.746 15.5531L7.06338 11.7434L20.1048 11.7434C21.2474 11.7434 22.1736 10.7853 22.1736 9.60327C22.1736 8.42128 21.2474 7.46309 20.1048 7.46309L7.06341 7.46309L10.7461 3.65351C11.5539 2.81766 11.554 1.46257 10.7461 0.626724C9.93824 -0.208777 8.62833 -0.208973 7.82043 0.626527L0.605803 8.08994C-0.201849 8.92569 -0.201977 10.2807 0.605675 11.1165L7.82028 18.5798C8.6282 19.4156 9.93816 19.4155 10.7461 18.5798C11.554 17.744 11.554 16.3889 10.746 15.5531Z" fill="CurrentColor"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="preview_container content_max">
+                            <!-- <video src="vidéo\Summoner's Clash by GuyfH3CTOR - Opera 2024-05-29 23-40-30.mp4"></video> -->
+                        </div>
+                        <div class="container-dark">
+                            <button class="pushButton preview_button" disabled>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.29em" viewBox="0 0 23 20" fill="none" style="rotate: 180deg;">
+                                    <path d="M10.746 15.5531L7.06338 11.7434L20.1048 11.7434C21.2474 11.7434 22.1736 10.7853 22.1736 9.60327C22.1736 8.42128 21.2474 7.46309 20.1048 7.46309L7.06341 7.46309L10.7461 3.65351C11.5539 2.81766 11.554 1.46257 10.7461 0.626724C9.93824 -0.208777 8.62833 -0.208973 7.82043 0.626527L0.605803 8.08994C-0.201849 8.92569 -0.201977 10.2807 0.605675 11.1165L7.82028 18.5798C8.6282 19.4156 9.93816 19.4155 10.7461 18.5798C11.554 17.744 11.554 16.3889 10.746 15.5531Z" fill="CurrentColor"></path>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                     <div id="tags" class="tags">
-                        <!-- <div class="tag"><div class="tag_dot"></div>game jam</div>
-                        <div class="tag"><div class="tag_dot"></div>game dev</div>
-                        <div class="tag"><div class="tag_dot"></div>unity</div>
-                        <div class="tag"><div class="tag_dot"></div>c#</div>
-                        <div class="tag"><div class="tag_dot"></div>pixel art</div> -->
+                        <div name="tag" class="tag"><div class="tag_dot"></div>game jam</div>
+                        <!-- <div class="tag"><div class="tag_dot"></div>game dev</div> -->
+                        <!-- <div class="tag"><div class="tag_dot"></div>unity</div> -->
+                        <!-- <div class="tag"><div class="tag_dot"></div>c#</div> -->
+                        <!-- <div class="tag"><div class="tag_dot"></div>pixel art</div> -->
                     </div>
                 </div>
                 
@@ -127,7 +160,7 @@
                     </div>
                     <div class="container-dark">
                         <div class="content">
-                            <button class="pushButton linkButton" type="button" role="link" aria-selected="true">Itch.io</button>
+                            <button id="link" class="pushButton linkButton" type="button" role="link" aria-selected="true">Itch.io</button>
                         </div>
                     </div>
                 </div>
@@ -143,7 +176,7 @@
                     </button>
                 </div>
                 <div class="container-dark">
-                    <div id="exploreNumber">0/0</div>
+                    <div id="exploreNumber">x/x</div>
                 </div>
                 <div class="container-dark content-max-height content-max-width">
                     <button id="exploreNext" class="pushButton page_explore" type="button" role="contact" aria-selected="true">
@@ -155,16 +188,87 @@
             </div>
         </div>
 
-        <!--  -->
+        <!-- Professional -->
 
-        <div id="Professional" class="page tabcontent">
+        <div id="Professional" class="page tabcontent page_pro">
+            <div class="container_pro center">
+                <img class="img_pro" src="Image/fl.png" alt="">
+                <div class="container-full">
+                    <div class="container-dark center">
+                        <div class="text_pro center">Be-Air</div>
+                        <div class="center">Manuals Digitalization </div>
+                    </div>
+                    <div class="container-dark center">
+                        I helped Be-Air in the process of digitizing a dozen of aeronautics manuals, copying, layout, and rechecking each manuals.
+                    </div>
+                </div>
+                <div class="text_pro_year center">
+                    Summer 2022
+                </div>
+            </div>
 
+            <!--  -->
+
+            <div class="container_pro center">
+                <img class="img_pro" src="Image/corn.png" alt="">
+                <div class="container-full">
+                    <div class="container-dark center">
+                        <div class="text_pro center">in the fields</div>
+                        <div class="center">Corn Picker</div>
+                    </div>
+                    <div class="container-dark center">
+                        Nothing better than to pick corn in the good old fields. Without forgetting the good old scorching sun...
+                    </div>
+                </div>
+                <div class="text_pro_year center">
+                    Summer 2024
+                </div>
+            </div>
+
+            <!--  -->
+
+            <div class="container_pro center">
+                <img class="img_pro" src="Image/bandai_namco.png" alt="">
+                <div class="container-full">
+                    <div class="container-dark center">
+                        <!-- <div class="text_pro center">Bandai Namco</div> -->
+                        <div class="center">Game Evaluation Service Assistant</div>
+                    </div>
+                    <div class="container-dark center">
+                        As a game evaluation service assistant I provided support and assistance in the evaluation and testing of video games, for in house productions and publishing opportunities.
+                    </div>
+                </div>
+                <div class="text_pro_year center">
+                    2025- 2026
+                </div>
+            </div>
+
+            <!--  -->
+
+            <div class="container_pro">
+                <div class="container-full pro_together">
+                    <div class="container-dark content-max">
+                        <a href="https://www.linkedin.com/in/hector-rameau-04967622b/" target="_blank" class="content-max-height content-max-width">
+                            <button id="exploreNext" class="pushButton proButton content-max" type="button" role="contact" aria-selected="true">
+                                TOGETHER ?
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="text_pro_year center">
+                    tomorrow
+                </div>
+            </div>
         </div>
 
         <!--  -->
 
-        <div id="About Me" class="page tabcontent">
-
+        <div id="About Me" class="page tabcontent center">
+            <div class="container-full center">
+                <div class="container-dark">
+                    this is a bit empty ... who am I ?
+                </div>
+            </div>
         </div>
 
         <!-- Scripts -->
@@ -173,6 +277,8 @@
         <script>
             // Get the element with id="defaultOpen" and click on it
             document.getElementById("defaultOpen").click();
+            
+            // Open Tab
 
             function openTab(evt, tabName) {
                 var i, tabcontent, tablinks;
@@ -188,12 +294,14 @@
                 evt.currentTarget.className += " active";
             }
 
+            // Open CSV
+
             async function getCSVRowByName(csvPath, nameValue) {
                 try {
                     const parsed = await window.loadCSV(csvPath);
                     if (!parsed || !parsed.rows) return null;
 
-                    // console.log('CSV Rows:', parsed.rows);
+                    console.log('CSV Rows:', parsed.rows);
                     // console.log('CSV Rows 0 name:', parsed.rows[0].name);
                     
                     // exact match loop
@@ -210,11 +318,41 @@
                             // set preview
 
                             // set tags
+                            removeTags();
+
+                            // set tags
+                            let tags = row.tags;
+                            const myTags = tags.split(", ");
+                            for(let i = 0; i < myTags.length; i++)
+                            {
+                                const tag = document.createElement("div");
+                                tag.classList.add("tag");
+
+                                const dot = document.createElement("div");
+                                dot.classList.add("tag_dot");
+
+                                const node = document.createTextNode(myTags[i]);
+                                
+                                tag.appendChild(dot);
+                                tag.appendChild(node);
+                                
+                                const tagsElements = document.getElementById("tags");
+                                tagsElements.appendChild(tag);
+                            }
+                            
 
                             // set resume
                             document.getElementById("resume").innerText = row.description;
 
                             // set link
+                            if(row.link = " ")
+                            {
+                                console.log("null")
+                                document.getElementById("link").disabled = true;
+                            }else{
+                                console.log(row.link)
+                                document.getElementById("link").disabled = false;
+                            }
 
                             // explore number
                             document.getElementById("exploreNumber").innerText = (i+1) + "/" + parsed.rows.length;
@@ -241,6 +379,19 @@
                 } catch (e) {
                     console.error('getCSVRowByName error:', e);
                     return null;
+                }
+            }
+
+            function removeTags (){
+                var childNodes = document.getElementById('tags').childNodes;
+                for(var i=childNodes.length-1; i >= 0; i--){
+                    var childNode = childNodes[i];
+                    // console.log(childNode.className);
+                    if(childNode.className = 'tag')
+                    {
+                        childNode.remove();
+                        // childNode.parentNode.removeChild(childNode);
+                    }
                 }
             }
         </script>
