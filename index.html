@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Hector's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="button.css">
+    <link rel="icon" href="Image/Favicon.svg" type="image/x-icon">
 </head>
 <body>
     <section class="header" role="banner">
@@ -21,9 +22,9 @@
                 <div class="small-screw-blue"></div>
             </div>
             <button class="tablinks" onclick="openTab(event, 'Highlights')" id="defaultOpen">Highlights</button>
-            <button class="tablinks" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('personal.csv', 'DYSON SPHERE INITIATIVE')">Personal</button>
-            <button class="tablinks" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('school.csv', 'Hellscape')">School</button>
-            <button class="tablinks" onclick="openTab(event, 'Professional')">Professional</button>
+            <button class="tablinks" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('personal.csv', 'DYSON SPHERE INITIATIVE')">Personal Project</button>
+            <button class="tablinks" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('school.csv', 'Hellscape')">School Project</button>
+            <button class="tablinks" onclick="openTab(event, 'Professional')">Professional Work</button>
             <button class="tablinks" onclick="openTab(event, 'About Me')">About Me</button>
 
             <div class="small-screws">
@@ -37,6 +38,16 @@
                 <button class="pushButton contactButton" title="go to linkedin" type="button" role="contact" aria-selected="true">Contact</button>
             </a>
         </div>
+        <div class="contact">
+            <a href="RESUME - hector rameau.pdf" class="content-max-height content-max-width" download>
+                <button class="pushButton contactButton center" title="go to linkedin" type="button" role="contact" aria-selected="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.29em" viewBox="0 0 23 20" fill="none">
+                        <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="CurrentColor" fill="CurrentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    CV
+                </button>
+            </a>
+        </div>
     </section>
 
     <!-- Pages -->
@@ -45,70 +56,80 @@
 
         <!-- #region Highlights -->
 
-        <div id="Highlights" class="page tabcontent content-fit-height">
+        <div id="Highlights" class="page tabcontent content-fit-height tab_content_flex_column center">
 
             <!--  -->
-
-            <div class="container-full tab_content_flex_row">
-                <div class="title center">
-                    Darkest Night
-                </div>
-                <div class="preview-card">
-                    <video src="vidéo\Darkest Night - PPFA_UnityProject_Hector Rameau_GD2 2024-05-29 21-43-35.mp4"></video>
-                </div>
-                <div class="tags">
-                    <div class="tag"><div class="tag_dot"></div>game dev</div>
-                    <div class="tag"><div class="tag_dot"></div>unity</div>
-                    <div class="tag"><div class="tag_dot"></div>c#</div>
-                    <div class="tag"><div class="tag_dot"></div>pixel art</div>
-                    <div class="tag"><div class="tag_dot"></div>game design</div>
-                </div>
-                <div class="container-dark">
-                    <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('school.csv', 'Darkest Night')">Explore</button>
+            <div class="container-full content-fit-width rainbow">
+                <div class="container-dark center content-fit-width">
+                    Hi ! I’m Hector, a junior game designer with a passion to create engaging experience for players. 
+                    <hr>
+                    I have a quirk to give critical feedback from concept to completion.
+                    <hr>
+                    I am looking for opportunities to leverage and improve my skills and contribute to the success of your games.
                 </div>
             </div>
+            <div class="page content-fit-height">
+                <div class="container-full tab_content_flex_row">
+                    <div class="title center">
+                        Darkest Night
+                    </div>
+                    <div class="preview_highlights">
+                        <video src="image\DarkestNight_1.mp4" autoplay muted controls></video>
+                    </div>
+                    <div class="tags">
+                        <div class="tag"><div class="tag_dot"></div>game dev</div>
+                        <div class="tag"><div class="tag_dot"></div>unity</div>
+                        <div class="tag"><div class="tag_dot"></div>c#</div>
+                        <div class="tag"><div class="tag_dot"></div>pixel art</div>
+                        <div class="tag"><div class="tag_dot"></div>game design</div>
+                    </div>
+                    <div class="container-dark">
+                        <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('school.csv', 'Darkest Night')">Explore</button>
+                    </div>
+                </div>
 
-            <!--  -->
+                <!--  -->
 
-            <div class="container-full tab_content_flex_row">
-                <div class="title center">
-                    Hellscape
+                <div class="container-full tab_content_flex_row">
+                    <div class="title center">
+                        Hellscape
+                    </div>
+                    <div class="preview_highlights">
+                        <img src="image/Hellscape_1.png" alt="" class="dot">
+                    </div>
+                    <div class="tags">
+                        <div class="tag"><div class="tag_dot"></div>game Dev</div>
+                        <div class="tag"><div class="tag_dot"></div>UE5</div>
+                        <div class="tag"><div class="tag_dot"></div>Unreal Blueprints</div>
+                    </div>
+                    <div class="container-dark">
+                        <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('school.csv', 'Hellscape')">Explore</button>
+                    </div>
                 </div>
-                <div class="preview-card">
-                    <img src="Image/HellScape1.png" alt="" class="dot">
+
+                <!--  -->
+
+                <div class="container-full tab_content_flex_row">
+                    <div class="title center">
+                        Summoner's Clash
+                    </div>
+                    <div class="preview_highlights">
+                        <video src="image\Clash_1.mp4" autoplay muted controls></video>
+                    </div>
+                    <div class="tags">
+                        <div class="tag"><div class="tag_dot"></div>game jam</div>
+                        <div class="tag"><div class="tag_dot"></div>game dev</div>
+                        <div class="tag"><div class="tag_dot"></div>unity</div>
+                        <div class="tag"><div class="tag_dot"></div>c#</div>
+                        <div class="tag"><div class="tag_dot"></div>pixel art</div>
+                    </div>
+                    <div class="container-dark">
+                        <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('personal.csv', 'Summoner\'s Clash')">Explore</button>
+                    </div>
                 </div>
-                <div class="tags">
-                    <div class="tag"><div class="tag_dot"></div>game Dev</div>
-                    <div class="tag"><div class="tag_dot"></div>UE5</div>
-                    <div class="tag"><div class="tag_dot"></div>Unreal Blueprints</div>
-                </div>
-                <div class="container-dark">
-                    <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('school.csv', 'Hellscape')">Explore</button>
-                </div>
+
+                <!--  -->
             </div>
-
-            <!--  -->
-
-            <div class="container-full tab_content_flex_row">
-                <div class="title center">
-                    Summoner's Clash
-                </div>
-                <div class="preview-card">
-                    <video src="vidéo\Summoner's Clash by GuyfH3CTOR - Opera 2024-05-29 23-40-30.mp4"></video>
-                </div>
-                <div class="tags">
-                    <div class="tag"><div class="tag_dot"></div>game jam</div>
-                    <div class="tag"><div class="tag_dot"></div>game dev</div>
-                    <div class="tag"><div class="tag_dot"></div>unity</div>
-                    <div class="tag"><div class="tag_dot"></div>c#</div>
-                    <div class="tag"><div class="tag_dot"></div>pixel art</div>
-                </div>
-                <div class="container-dark">
-                    <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('personal.csv', 'Summoner\'s Clash')">Explore</button>
-                </div>
-            </div>
-
-            <!--  -->
             
         </div>
         
@@ -124,19 +145,19 @@
                     <div id="title" class="title center">
                         no title
                     </div>
-                    <div class="preview center">
+                    <div class="preview_container">
                         <div class="container-dark">
-                            <button class="pushButton preview_button" disabled>
+                            <button id="previewPrevious" class="pushButton preview_button" disabled>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.29em" viewBox="0 0 23 20" fill="none">
                                     <path d="M10.746 15.5531L7.06338 11.7434L20.1048 11.7434C21.2474 11.7434 22.1736 10.7853 22.1736 9.60327C22.1736 8.42128 21.2474 7.46309 20.1048 7.46309L7.06341 7.46309L10.7461 3.65351C11.5539 2.81766 11.554 1.46257 10.7461 0.626724C9.93824 -0.208777 8.62833 -0.208973 7.82043 0.626527L0.605803 8.08994C-0.201849 8.92569 -0.201977 10.2807 0.605675 11.1165L7.82028 18.5798C8.6282 19.4156 9.93816 19.4155 10.7461 18.5798C11.554 17.744 11.554 16.3889 10.746 15.5531Z" fill="CurrentColor"></path>
                                 </svg>
                             </button>
                         </div>
-                        <div class="preview_container content_max">
-                            <!-- <video src="vidéo\Summoner's Clash by GuyfH3CTOR - Opera 2024-05-29 23-40-30.mp4"></video> -->
+                        <div id="preview" class="preview_source">
+                            <img class="previewContent" src="image/wip.png"></img>
                         </div>
                         <div class="container-dark">
-                            <button class="pushButton preview_button" disabled>
+                            <button id="previewNext" class="pushButton preview_button" disabled>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.29em" viewBox="0 0 23 20" fill="none" style="rotate: 180deg;">
                                     <path d="M10.746 15.5531L7.06338 11.7434L20.1048 11.7434C21.2474 11.7434 22.1736 10.7853 22.1736 9.60327C22.1736 8.42128 21.2474 7.46309 20.1048 7.46309L7.06341 7.46309L10.7461 3.65351C11.5539 2.81766 11.554 1.46257 10.7461 0.626724C9.93824 -0.208777 8.62833 -0.208973 7.82043 0.626527L0.605803 8.08994C-0.201849 8.92569 -0.201977 10.2807 0.605675 11.1165L7.82028 18.5798C8.6282 19.4156 9.93816 19.4155 10.7461 18.5798C11.554 17.744 11.554 16.3889 10.746 15.5531Z" fill="CurrentColor"></path>
                                 </svg>
@@ -145,23 +166,21 @@
                     </div>
                     <div id="tags" class="tags">
                         <div name="tag" class="tag"><div class="tag_dot"></div>game jam</div>
-                        <!-- <div class="tag"><div class="tag_dot"></div>game dev</div> -->
-                        <!-- <div class="tag"><div class="tag_dot"></div>unity</div> -->
-                        <!-- <div class="tag"><div class="tag_dot"></div>c#</div> -->
-                        <!-- <div class="tag"><div class="tag_dot"></div>pixel art</div> -->
+                    </div>
+                    <div id="resume" class="container-dark">
+                        pitch of the game
                     </div>
                 </div>
                 
                 <!-- content resume -->
                 <div class="container-full content_resume">
-                    <div id="resume" class="container-dark content-max-height">
-                        <!-- Summoner's Clash is a game made for the Ludum Dare 55 Game Jam.
-                        <p>Picks cards and find the right combos to destroy your opponent.</p> -->
+                    <div id="tasks" class="container-dark content-max-height">
+                        what did i do in this game ?
                     </div>
                     <div class="container-dark">
-                        <div class="content">
-                            <button id="link" class="pushButton linkButton" type="button" role="link" aria-selected="true">Itch.io</button>
-                        </div>
+                        <a id="linkRef" href="#" class="content">
+                            <button id="link" class="pushButton linkButton" type="button" role="link" aria-selected="true">project page</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -263,10 +282,59 @@
 
         <!--  -->
 
-        <div id="About Me" class="page tabcontent center">
-            <div class="container-full center">
-                <div class="container-dark">
-                    this is a bit empty ... who am I ?
+        <div id="About Me" class="page tabcontent center aboutme">
+            <div class="container_about_me center">
+                <div class="container-full center picture_border">
+                    <div class="container-dark picture_border">
+                        <img src="image/pic.png" alt="">
+                    </div>
+                </div>
+                <div class="container-full center">
+                    <div class="container-dark">
+                        <div class="aboutme_title">Game design</div>
+                        I specialize in game design. i can present systems, write documentation, and balance mecanics. 
+                    </div>
+                    <div class="container-dark">
+                        <div class="aboutme_text_title">Using : </div>
+                        <div class="aboutme_text">- Microsoft Office & Google Suite (c#) : excel, powerpoint...</div>
+                        <div class="aboutme_text">- Documentation tools : miro</div>
+                        <div class="aboutme_text">- production tools : hack & plan</div>
+                    </div>
+                </div>
+                <div class="container-full center">
+                    <div class="container-dark">
+                        <div class="aboutme_title">Development</div>
+                        <div class="aboutme_text">I can prototype and iterate on my ideas quickly.</div>
+                    </div>
+                    <div class="container-dark">
+                        <div class="aboutme_text_title">Using : </div>
+                        <div class="aboutme_text">- unity (c#)</div>
+                        <div class="aboutme_text">- Unreal Engine 5 (blueprints)</div>
+                        <div class="aboutme_text">- Versioning (git)</div>
+                    </div>
+                </div>
+                <div class="container-full center">
+                    <div class="container-dark">
+                        <div class="aboutme_title">Level design</div>
+                        I am able to sketch levels, integrate them in engine, and quickly iterate on them.
+                    </div>
+                </div>
+            </div>
+            <div class="container-full aboutme_more">
+                <div class="container-dark content-max-width aboutme_title">
+                    Some of the things that I like... <small style="font-size: x-small;">If you want to know a bit more about me!</small>
+                </div>
+                <div class="container-dark content-max-width aboutme_list">
+                    <b style="color: var(--yellow);">Video games</b> | Bioshock, Factorio, Dishonored, Cyberpunk 2077, and a lot more.
+                </div>
+                <div class="container-dark content-max-width aboutme_list">
+                    <b style="color: var(--yellow);">Shows</b> | Last man, GOT, Arkane, House of Cards, The Batman, and a lot more
+                </div>
+                <div class="container-dark content-max-width aboutme_list">
+                    <b style="color: var(--yellow);">Music</b> | Classical, Jazz, games & movie music, white girl music. 
+                </div>
+                <div class="container-dark content-max-width aboutme_list">
+                    <b style="color: var(--yellow);">Traveling</b> | I went all around the world with my family, and i love to ride my bike.
                 </div>
             </div>
         </div>
@@ -275,6 +343,8 @@
 
         <script src="csv.js"></script>
         <script>
+            let currentLoadPreviewController = null;
+
             // Get the element with id="defaultOpen" and click on it
             document.getElementById("defaultOpen").click();
             
@@ -301,7 +371,7 @@
                     const parsed = await window.loadCSV(csvPath);
                     if (!parsed || !parsed.rows) return null;
 
-                    console.log('CSV Rows:', parsed.rows);
+                    // console.log('CSV Rows:', parsed.rows);
                     // console.log('CSV Rows 0 name:', parsed.rows[0].name);
                     
                     // exact match loop
@@ -315,7 +385,8 @@
                             // set title
                             document.getElementById("title").innerText = row.name;
 
-                            // set preview
+                            // set preview first img or video
+                            LoadPreview(row.src, 0);
 
                             // set tags
                             removeTags();
@@ -343,15 +414,16 @@
 
                             // set resume
                             document.getElementById("resume").innerText = row.description;
+                            document.getElementById("tasks").innerText = row.tasks;
 
                             // set link
-                            if(row.link = " ")
-                            {
-                                console.log("null")
+                            if(row.link == "") {
                                 document.getElementById("link").disabled = true;
-                            }else{
-                                console.log(row.link)
+                            } else {
                                 document.getElementById("link").disabled = false;
+                                document.getElementById("linkRef").target = "_blank";
+                                document.getElementById("linkRef").href = row.link;
+                                // document.getElementById("link").onclick = window.location.href = row.link;
                             }
 
                             // explore number
@@ -391,6 +463,85 @@
                     {
                         childNode.remove();
                         // childNode.parentNode.removeChild(childNode);
+                    }
+                }
+            }
+
+            function removePreviewContent (){
+                var childNodes = document.getElementById('preview').childNodes;
+                for(var i=childNodes.length-1; i >= 0; i--){
+                    var childNode = childNodes[i];
+                    // console.log(childNode.className);
+                    if(childNode.className = 'previewContent')
+                    {
+                        childNode.remove();
+                        // childNode.parentNode.removeChild(childNode);
+                    }
+                }
+            }
+            
+            async function LoadPreview(urls, index)
+            {
+                removePreviewContent();
+                // console.log(urls);
+
+                // No Urls => add wip image
+                if(urls == " ")
+                {
+                    const img = document.createElement("img");
+                    img.src = "image/wip.png";
+                    img.classList.add("previewContent");
+                    document.getElementById("preview").appendChild(img);
+                    return;
+                }
+                
+                document.getElementById("previewPrevious").disabled = true;
+                document.getElementById("previewNext").disabled = true;
+                
+                // Urls => select index url
+                const myUrls = urls.split(", ");
+                for(let i = 0; i < myUrls.length; i++)
+                {
+                    var url = myUrls[i]
+                    console.log(url + " | " + i);
+
+                    if(i == index) {
+                        const splitUrl = url.split(".");
+                        console.log(url + " | selected");
+
+                        // set preview
+
+                        if(splitUrl[1] == "png") { // Select png
+                            const img = document.createElement("img");
+                            img.src = "image/" + url;
+                            img.classList.add("previewContent");
+                            document.getElementById("preview").appendChild(img);
+                        } else if(splitUrl[1] == "mp4") { // Select mp4
+                            const vid = document.createElement("video");
+                            vid.src = "image/" + url;
+                            vid.classList.add("previewContent");
+                            vid.autoplay = true;
+                            vid.controls = true;
+                            document.getElementById("preview").appendChild(vid);
+                        }
+
+                        // set button
+
+                        if(i == 0) { // previous button
+                            document.getElementById("previewPrevious").disabled = true;
+                        } else {
+                            document.getElementById("previewPrevious").disabled = false;
+                            document.getElementById("previewPrevious").onclick = function () { LoadPreview(urls, (i - 1)); };
+                        }
+
+                        if((i + 1) < myUrls.length) { // next button
+                            document.getElementById("previewNext").disabled = false;
+                            document.getElementById("previewNext").onclick = function () { LoadPreview(urls, (i + 1)); };
+                        } else {
+                            document.getElementById("previewNext").disabled = true;
+                        }
+
+                        return;
                     }
                 }
             }

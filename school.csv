@@ -1,21 +1,19 @@
-name,tags,description,image name,link
+name,tags,description,tasks,src,link
 Hellscape,"gamedev, UE5, Unreal Blueprints","Hellscape is a tower defense game, made during my first school year as an end of year project, with a team composed of 3 Game Designers and 4 3D Artists.
-",,
+",my tasks were : ,"Hellscape_1.png, Hellscape_2.mp4",
 Indiana Jones And The Lost City Of Atlantis,"gamedev, game design, unity, c#","The lost city of Atlantis is a prototype made in a school workshop, inspired by games like Mist or The Room, set in the universe of Indiana Jones and made in 3 weeks by a group of 4 game designers, during my second year of game design at Brassart.
-",,
+",my tasks were : ,IndianaJones_1.mp4,
 Crime au Mont Saint-Michel,"gamedev, unity, c#, VR","CRIME au mont saint-michel is a short detective VR game, which take place in... you wouldn't guess... ""Mont Saint-Michel"". It was made by a groupe of 3 game designers in about 3 weeks, during my second year of game design at Brassart.
-",,
+",my tasks were : ,Crime_1.png,
 Darkest Night,"gamedev, unity, c#, pixel art, game design","The Darkest Night is a horror arcade game. The player's goal is to, firstly not die, and secondly get as many points as possible. It was made as an end of year SOLO project, in about 2 weeks of work.
-",,
+",my tasks were : ,DarkestNight_1.mp4,https://guyfh3ctor.itch.io/darkest-night
 Simulation Of Speed,"level design, unity","This project was meant to use every mean possible to simulate speed.
 ! This is not meant to be a playable game !
-",,
-Penitence,"gamedev, unity, c#, game design, pixel art","This is our end of study project, as a 3 person group and still in work in progress.
-Pénitence is a simultaneous turn on a grid based, pixel art, game where you play an innocent youngster who must climb a world tower, meet new society and age at each floor with a unique skill system.
-Our goal is to emphasize two theories about the corruption of man by society and humans as a social animal.
-",,
+",my tasks were : ,Speed_1.png,https://guyfh3ctor.itch.io/simulation-of-speed
+Penitence,"gamedev, unity, c#, game design, pixel art","Embark on a journey of penance to absolve yourself of your future or past sins. Explore the ignorance of adolescence as you discover the world and its civilizations. Form relationships and shape your ideals and skills through your words and actions.
+",my tasks were : ,Penitence_1.png,
 Datamass,"gamedev, unity, c#, game design, system design","Destroy your friends with superweapons in DATAMASS.
 DATAMASS is inspired by game like Planetary Annihilation : Titans and Total Annihilation.
 Create your own map, with an in game map editor, and play with your friends thanks to Coherence Multiplayer.
 ! This is a End of School Personnal Project currently in developement !
-",,
+",my tasks were : ,Datamass_1.png,

@@ -1,7 +1,16 @@
-name,tags,description,image name,link
-DYSON SPHERE INITIATIVE,"gamedev, UE5, art","Dyson Sphere Initiative is a small project I made, inspired by the game ExoMiner, at the end of the 2023 summer to train myself in making UI, using unreal engine 5 widgets.
-",,
-Summoner's Clash,"gamejam, gamedev, unity, c#, pixel art","Summoner's Clash is a game made for the Ludum Dare 55 Game Jam. Picks cards and find the right combos to destroy your opponent.
-",,
+name,tags,description,tasks,src,link
+DYSON SPHERE INITIATIVE,"gamedev, UE5, art","Dyson Sphere Initiative is a small UI project for a idle game, inspired by the game ExoMiner, and made at the end of the 2023 summer to train myself in making UI, using unreal engine 5 widgets.
+","my tasks were : 
+- Design the UI.
+- Implement the UI in UE5 widgets.","Dsp_1.png, Dsp_2.mp4",
+Summoner's Clash,"gamejam, gamedev, unity, c#, pixel art","Summoner's Clash is a game made for the Ludum Dare 55 Game Jam. Picks cards and find the right combos to destroy your opponent before he does.
+","my tasks were : 
+- Create the pixel art.
+- Implement design decision in Unity.
+- program the game",Clash_1.mp4,https://guyfh3ctor.itch.io/summoners-clash
 Apologues des Songes : Belleville,"unity, game design","Belleville is a immersive sim with metroidvania elements concept currently being prototyped.
-you can find the complete pitch in the link below.",,
+you can find the complete pitch in the link below.","my tasks were : 
+- Make design decision.
+- Create a pitch deck.
+- Create a fiting story.
+- Currently prototyping in unity.",,
