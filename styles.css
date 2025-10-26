@@ -518,20 +518,29 @@ html,body{
   border-radius: .83em;
 }
 
+.preview_highlights{
+  padding: 1rem;
+  background-color: var(--black);
+  border-radius: 5px;
+  line-height: 0;
+}
+
 .preview_highlights img{
   overflow: clip;
   overflow-clip-margin: content-box;
   width: 100%;
-  height: fit-content;
+  /* height: fit-content; */
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .preview_highlights video{
   overflow: clip;
   overflow-clip-margin: content-box;
   width: 100%;
-  height: fit-content;
+  /* height: fit-content; */
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .preview_source img{
@@ -540,6 +549,7 @@ html,body{
   width: fit-content;
   height: 100%;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .preview_source video{
@@ -548,6 +558,7 @@ html,body{
   width: fit-content;
   height: 100%;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 /* =================================================================================== */
