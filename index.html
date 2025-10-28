@@ -174,8 +174,10 @@
                 
                 <!-- content resume -->
                 <div class="container-full content_resume">
-                    <div id="tasks" class="container-dark content-max-height">
-                        what did i do in this game ?
+                    <div class="task-title">
+                        My tasks were :
+                    </div>
+                    <div id="tasks" class="container-dark content-max-height tasks">
                     </div>
                     <div class="container-dark">
                         <a id="linkRef" href="#" class="content">
@@ -410,11 +412,28 @@
                                 const tagsElements = document.getElementById("tags");
                                 tagsElements.appendChild(tag);
                             }
+
+                            // set tasks
+                            removeTasks();
+                            let tasks = row.tasks;
+                            const myTasks = tasks.split(", ");
+                            for(let i = 0; i < myTasks.length; i++)
+                            {
+                                console.log(myTasks[i]);
+                                const task = document.createElement("div");
+                                task.classList.add("task");
+
+                                const node = document.createTextNode(myTasks[i]);                                
+                                task.appendChild(node);
+                                
+                                const tagsElements = document.getElementById("tasks");
+                                tagsElements.appendChild(task);
+                            }
                             
 
                             // set resume
                             document.getElementById("resume").innerText = row.description;
-                            document.getElementById("tasks").innerText = row.tasks;
+                            // document.getElementById("tasks").innerText = row.tasks;
 
                             // set link
                             if(row.link == "") {
@@ -460,6 +479,19 @@
                     var childNode = childNodes[i];
                     // console.log(childNode.className);
                     if(childNode.className = 'tag')
+                    {
+                        childNode.remove();
+                        // childNode.parentNode.removeChild(childNode);
+                    }
+                }
+            }
+
+            function removeTasks (){
+                var childNodes = document.getElementById('tasks').childNodes;
+                for(var i=childNodes.length-1; i >= 0; i--){
+                    var childNode = childNodes[i];
+                    // console.log(childNode.className);
+                    if(childNode.className = 'task')
                     {
                         childNode.remove();
                         // childNode.parentNode.removeChild(childNode);
