@@ -21,11 +21,11 @@
                 <div class="small-screw-blue"></div>
                 <div class="small-screw-blue"></div>
             </div>
-            <button class="tablinks" onclick="openTab(event, 'Highlights')" id="defaultOpen">Highlights</button>
-            <button class="tablinks" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('personal.csv', 'DYSON SPHERE INITIATIVE')">Personal Project</button>
-            <button class="tablinks" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('school.csv', 'Hellscape')">School Project</button>
-            <button class="tablinks" onclick="openTab(event, 'Professional')">Professional Work</button>
-            <button class="tablinks" onclick="openTab(event, 'About Me')">About Me</button>
+            <button class="tablinks" onclick="document.getElementById('HIGHLIGHTS').scrollIntoView({behavior: 'smooth'});">Highlights</button>
+            <button class="tablinks" onclick="document.getElementById('PROJECTS').scrollIntoView({behavior: 'smooth'});">Personal Projects</button>
+            <button class="tablinks" onclick="document.getElementById('SCHOOL').scrollIntoView({behavior: 'smooth'});">School Projects</button>
+            <button class="tablinks" onclick="document.getElementById('WORK').scrollIntoView({behavior: 'smooth'});">Professional Work</button>
+            <button class="tablinks" onclick="document.getElementById('ABOUT ME').scrollIntoView({behavior: 'smooth'});">About Me</button>
 
             <div class="small-screws">
                 <div class="small-screw-blue"></div>
@@ -55,549 +55,694 @@
     <section class="pages">
 
         <!-- #region Highlights -->
+         <div class="page_title center"  id="HIGHLIGHTS">
+            <img src="Image/device_dots.png" alt="" class="page_title_device-dots__img">
+            HIGHLIGHTS
+            <img src="Image/device_dots.png" alt="" class="page_title_device-dots__img">
+         </div>
 
-        <div id="Highlights" class="page tabcontent content-fit-height tab_content_flex_column center">
+        <div id="Highlights" class="grid center">
 
-            <!--  -->
-            <div class="container-full content-fit-width rainbow">
-                <div class="container-dark center content-fit-width">
-                    Hi ! I’m Hector, a junior game designer with a passion to create engaging experience for players. 
-                    <hr>
-                    I have a quirk to give critical feedback from concept to completion.
-                    <hr>
-                    I am looking for opportunities to leverage and improve my skills and contribute to the success of your games.
-                </div>
-            </div>
-            <div class="page content-fit-height">
-                <div class="container-full tab_content_flex_row">
-                    <div class="title center">
-                        Darkest Night
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front light-blue">
+                        <img src="image/Datamass/1.png" alt="DATAMASS">
+                        <div>DATAMASS</div>
                     </div>
-                    <div class="preview_highlights">
-                        <video src="image\DarkestNight_1.mp4" autoplay muted controls></video>
-                    </div>
-                    <div class="tags">
-                        <div class="tag"><div class="tag_dot"></div>game dev</div>
-                        <div class="tag"><div class="tag_dot"></div>unity</div>
-                        <div class="tag"><div class="tag_dot"></div>c#</div>
-                        <div class="tag"><div class="tag_dot"></div>pixel art</div>
-                        <div class="tag"><div class="tag_dot"></div>game design</div>
-                    </div>
-                    <div class="container-dark">
-                        <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('school.csv', 'Darkest Night')">Explore</button>
+                    <div class="P_card_back">
+                        <div class="back_title light-blue"> DATAMASS</div>
+                        <div class="back_description"> DATAMASS is ...</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2025</div>
+                            <div class="tag"><div class="tag_dot"></div>Solo</div>
+                            <div class="tag"><div class="tag_dot"></div>Unity</div>
+                            <div class="tag"><div class="tag_dot"></div>Prototyping</div>
+                            <div class="tag"><div class="tag_dot"></div>Game design</div>
+                            <div class="tag"><div class="tag_dot"></div>System Design</div>
+                        </div>
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('Datamass')"> LEARN MORE </button></div>
                     </div>
                 </div>
-
-                <!--  -->
-
-                <div class="container-full tab_content_flex_row">
-                    <div class="title center">
-                        Hellscape
-                    </div>
-                    <div class="preview_highlights">
-                        <img src="image/Hellscape_1.png" alt="" class="dot">
-                    </div>
-                    <div class="tags">
-                        <div class="tag"><div class="tag_dot"></div>game Dev</div>
-                        <div class="tag"><div class="tag_dot"></div>UE5</div>
-                        <div class="tag"><div class="tag_dot"></div>Unreal Blueprints</div>
-                    </div>
-                    <div class="container-dark">
-                        <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('school.csv', 'Hellscape')">Explore</button>
-                    </div>
-                </div>
-
-                <!--  -->
-
-                <!-- <div class="container-full tab_content_flex_row">
-                    <div class="title center">
-                        Summoner's Clash
-                    </div>
-                    <div class="preview_highlights">
-                        <video src="image\Clash_1.mp4" autoplay muted controls></video>
-                    </div>
-                    <div class="tags">
-                        <div class="tag"><div class="tag_dot"></div>game jam</div>
-                        <div class="tag"><div class="tag_dot"></div>game dev</div>
-                        <div class="tag"><div class="tag_dot"></div>unity</div>
-                        <div class="tag"><div class="tag_dot"></div>c#</div>
-                        <div class="tag"><div class="tag_dot"></div>pixel art</div>
-                    </div>
-                    <div class="container-dark">
-                        <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('personal.csv', 'Summoner\'s Clash')">Explore</button>
-                    </div>
-                </div> -->
-
-                <!--  -->
-
-                <div class="container-full tab_content_flex_row">
-                    <div class="title center">
-                        Apologue des Songes : Belleville
-                    </div>
-                    <div class="preview_highlights">
-                        <img src="image/Belleville_1.png" alt="" class="dot">
-                    </div>
-                    <div class="tags">
-                        <div class="tag"><div class="tag_dot"></div>game dev</div>
-                        <div class="tag"><div class="tag_dot"></div>unity</div>
-                        <div class="tag"><div class="tag_dot"></div>c#</div>
-                    </div>
-                    <div class="container-dark">
-                        <button class="pushButton explore" onclick="openTab(event, 'ExploreProjects'), getCSVRowByName('personal.csv', 'Apologues des Songes : Belleville')">Explore</button>
-                    </div>
-                </div>
-
-                <!--  -->
             </div>
             
-        </div>
-        
-        <!-- #endregion Highlights -->
-
-        <div id="ExploreProjects" class="page tabcontent tab_content_flex_column">
-
-            <!-- page content -->
-            <div class="page_content center content-max-height">
-
-                <!-- content title -->
-                <div class="container-full content_title">
-                    <div id="title" class="title center">
-                        no title
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front">
+                        <img src="image/DYSON SPHERE INITIATIVE/1.png" alt="Dyson Sphere Initiative">
+                        <div>DYDON SPHERE INITIATIVE</div>
                     </div>
-                    <div class="preview_container">
-                        <div class="container-dark">
-                            <button id="previewPrevious" class="pushButton preview_button" disabled>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.29em" viewBox="0 0 23 20" fill="none">
-                                    <path d="M10.746 15.5531L7.06338 11.7434L20.1048 11.7434C21.2474 11.7434 22.1736 10.7853 22.1736 9.60327C22.1736 8.42128 21.2474 7.46309 20.1048 7.46309L7.06341 7.46309L10.7461 3.65351C11.5539 2.81766 11.554 1.46257 10.7461 0.626724C9.93824 -0.208777 8.62833 -0.208973 7.82043 0.626527L0.605803 8.08994C-0.201849 8.92569 -0.201977 10.2807 0.605675 11.1165L7.82028 18.5798C8.6282 19.4156 9.93816 19.4155 10.7461 18.5798C11.554 17.744 11.554 16.3889 10.746 15.5531Z" fill="CurrentColor"></path>
-                                </svg>
-                            </button>
+                    <div class="P_card_back">
+                        <div class="back_title"> DYDON SPHERE INITIATIVE</div>
+                        <div class="back_description"> dyson sphere initiative is ...</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2023</div>
+                            <div class="tag"><div class="tag_dot"></div>Solo</div>
+                            <div class="tag"><div class="tag_dot"></div>Unreal Engine 5</div>
+                            <div class="tag"><div class="tag_dot"></div>Asset Creation</div>
                         </div>
-                        <div id="preview" class="preview_source">
-                            <img class="previewContent" src="image/wip.png"></img>
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('DYSON SPHERE INITIATIVE')"> LEARN MORE </button></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front red">
+                        <img src="image/Darkest Night/1.png" alt="DARKEST NIGHT">
+                        <div>DARKEST NIGHT</div>
+                    </div>
+                    <div class="P_card_back">
+                        <div class="back_title red"> DARKEST NIGHT</div>
+                        <div class="back_description"> Darkest Night is ...</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2024</div>
+                            <div class="tag"><div class="tag_dot"></div>Solo</div>
+                            <div class="tag"><div class="tag_dot"></div>Unity</div>
+                            <div class="tag"><div class="tag_dot"></div>Prototyping</div>
+                            <div class="tag"><div class="tag_dot"></div>Asset Creation</div>
+                            <div class="tag"><div class="tag_dot"></div>Game Design</div>
                         </div>
-                        <div class="container-dark">
-                            <button id="previewNext" class="pushButton preview_button" disabled>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.29em" viewBox="0 0 23 20" fill="none" style="rotate: 180deg;">
-                                    <path d="M10.746 15.5531L7.06338 11.7434L20.1048 11.7434C21.2474 11.7434 22.1736 10.7853 22.1736 9.60327C22.1736 8.42128 21.2474 7.46309 20.1048 7.46309L7.06341 7.46309L10.7461 3.65351C11.5539 2.81766 11.554 1.46257 10.7461 0.626724C9.93824 -0.208777 8.62833 -0.208973 7.82043 0.626527L0.605803 8.08994C-0.201849 8.92569 -0.201977 10.2807 0.605675 11.1165L7.82028 18.5798C8.6282 19.4156 9.93816 19.4155 10.7461 18.5798C11.554 17.744 11.554 16.3889 10.746 15.5531Z" fill="CurrentColor"></path>
-                                </svg>
-                            </button>
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('Darkest Night')"> LEARN MORE </button></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+         <div class="page_title center" id="PROJECTS">
+            <img src="Image/device_dots.png" alt="" class="page_title_device-dots__img">
+            PERSONAL PROJECTS
+            <img src="Image/device_dots.png" alt="" class="page_title_device-dots__img">
+         </div>
+
+        <div id="Highlights" class="grid center">
+            
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front">
+                        <img src="image/DYSON SPHERE INITIATIVE/1.png" alt="Dyson Sphere Initiative">
+                        <div>DYDON SPHERE INITIATIVE</div>
+                    </div>
+                    <div class="P_card_back">
+                        <div class="back_title"> DYDON SPHERE INITIATIVE</div>
+                        <div class="back_description"> dyson sphere initiative is ...</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2023</div>
+                            <div class="tag"><div class="tag_dot"></div>Solo</div>
+                            <div class="tag"><div class="tag_dot"></div>Unreal Engine 5</div>
+                            <div class="tag"><div class="tag_dot"></div>Asset Creation</div>
                         </div>
-                    </div>
-                    <div id="tags" class="tags">
-                        <div name="tag" class="tag"><div class="tag_dot"></div>game jam</div>
-                    </div>
-                    <div id="resume" class="container-dark">
-                        pitch of the game
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('DYSON SPHERE INITIATIVE')"> LEARN MORE </button></div>
                     </div>
                 </div>
-                
-                <!-- content resume -->
-                <div class="container-full content_resume">
-                    <div class="task-title">
-                        My tasks were :
+            </div>
+            
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front purple">
+                        <img src="image/Belleville/1.png" alt="BELLEVILLE">
+                        <div>BELLEVILLE</div>
                     </div>
-                    <div id="tasks" class="container-dark content-max-height tasks">
+                    <div class="P_card_back">
+                        <div class="back_title purple"> BELLEVILLE</div>
+                        <div class="back_description"> Bellville is ...</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2025</div>
+                            <div class="tag"><div class="tag_dot"></div>Unity</div>
+                            <div class="tag"><div class="tag_dot"></div>Pitch deck</div>
+                            <div class="tag"><div class="tag_dot"></div>Prototyping</div>
+                        </div>
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('Belleville')"> LEARN MORE </button></div>
                     </div>
-                    <div class="container-dark">
-                        <a id="linkRef" href="#" class="content">
-                            <button id="link" class="pushButton linkButton" type="button" role="link" aria-selected="true">project page</button>
-                        </a>
+                </div>
+            </div>
+            
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front yellow">
+                        <img src="image/Summoner's Clash/1.png" alt="Summoner's Clash">
+                        <div>SUMMONER'S CLASH</div>
+                    </div>
+                    <div class="P_card_back">
+                        <div class="back_title yellow"> SUMMONER'S CLASH</div>
+                        <div class="back_description"> Summoner's Clash is ...</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2024</div>
+                            <div class="tag"><div class="tag_dot"></div>Unity</div>
+                            <div class="tag"><div class="tag_dot"></div>Prototyping</div>
+                            <div class="tag"><div class="tag_dot"></div>Game design</div>
+                            <div class="tag"><div class="tag_dot"></div>Game Jam</div>
+                        </div>
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('Summoner\'s Clash')"> LEARN MORE </button></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front blue">
+                        <img src="image/This website/1.png" alt="THIS WEBSITE">
+                        <div>THIS WEBSITE</div>
+                    </div>
+                    <div class="P_card_back">
+                        <div class="back_title blue"> THIS WEBSITE</div>
+                        <div class="back_description"> This website is a portfolio showcasing my work and projects.</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2024</div>
+                            <div class="tag"><div class="tag_dot"></div>Unity</div>
+                            <div class="tag"><div class="tag_dot"></div>Prototyping</div>
+                            <div class="tag"><div class="tag_dot"></div>Game design</div>
+                            <div class="tag"><div class="tag_dot"></div>Game Jam</div>
+                        </div>
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('This website')"> LEARN MORE </button></div>
                     </div>
                 </div>
             </div>
 
-            <!-- page button -->
-            <div class="container_page_btn">
-                <div class="container-dark content-max-height content-max-width">
-                    <button id="explorePrevious" class="pushButton page_explore" type="button" role="contact" aria-selected="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.29em" viewBox="0 0 23 20" fill="none">
-                            <path d="M10.746 15.5531L7.06338 11.7434L20.1048 11.7434C21.2474 11.7434 22.1736 10.7853 22.1736 9.60327C22.1736 8.42128 21.2474 7.46309 20.1048 7.46309L7.06341 7.46309L10.7461 3.65351C11.5539 2.81766 11.554 1.46257 10.7461 0.626724C9.93824 -0.208777 8.62833 -0.208973 7.82043 0.626527L0.605803 8.08994C-0.201849 8.92569 -0.201977 10.2807 0.605675 11.1165L7.82028 18.5798C8.6282 19.4156 9.93816 19.4155 10.7461 18.5798C11.554 17.744 11.554 16.3889 10.746 15.5531Z" fill="CurrentColor"></path>
-                        </svg>
-                    </button>
+        </div>
+
+         <div class="page_title center"  id="SCHOOL">
+            <img src="Image/device_dots.png" alt="" class="page_title_device-dots__img">
+            SCHOOL PROJECT
+            <img src="Image/device_dots.png" alt="" class="page_title_device-dots__img">
+         </div>
+
+        <div id="Highlights" class="grid center">
+            
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front red">
+                        <img src="image/Darkest Night/1.png" alt="DARKEST NIGHT">
+                        <div>DARKEST NIGHT</div>
+                    </div>
+                    <div class="P_card_back">
+                        <div class="back_title red"> DARKEST NIGHT</div>
+                        <div class="back_description"> Darkest Night is ...</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2024</div>
+                            <div class="tag"><div class="tag_dot"></div>Solo</div>
+                            <div class="tag"><div class="tag_dot"></div>Unity</div>
+                            <div class="tag"><div class="tag_dot"></div>Prototyping</div>
+                            <div class="tag"><div class="tag_dot"></div>Asset Creation</div>
+                            <div class="tag"><div class="tag_dot"></div>Game Design</div>
+                        </div>
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('Darkest Night')"> LEARN MORE </button></div>
+                    </div>
                 </div>
-                <div class="container-dark">
-                    <div id="exploreNumber">x/x</div>
+            </div>
+            
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front dark-purple">
+                        <img src="image/Hellscape/1.png" alt="HELLSCAPE">
+                        <div>HELLSCAPE</div>
+                    </div>
+                    <div class="P_card_back">
+                        <div class="back_title dark-purple"> HELLSCAPE</div>
+                        <div class="back_description"> Hellscape is ...</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2023</div>
+                            <div class="tag"><div class="tag_dot"></div>Prototyping</div>
+                            <div class="tag"><div class="tag_dot"></div>Unreal Engine 5</div>
+                            <div class="tag"><div class="tag_dot"></div>asset integration</div>
+                            <div class="tag"><div class="tag_dot"></div>Team Management</div>
+                        </div>
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('Hellscape')"> LEARN MORE </button></div>
+                    </div>
                 </div>
-                <div class="container-dark content-max-height content-max-width">
-                    <button id="exploreNext" class="pushButton page_explore" type="button" role="contact" aria-selected="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.29em" viewBox="0 0 23 20" fill="none" style="rotate: 180deg;">
-                            <path d="M10.746 15.5531L7.06338 11.7434L20.1048 11.7434C21.2474 11.7434 22.1736 10.7853 22.1736 9.60327C22.1736 8.42128 21.2474 7.46309 20.1048 7.46309L7.06341 7.46309L10.7461 3.65351C11.5539 2.81766 11.554 1.46257 10.7461 0.626724C9.93824 -0.208777 8.62833 -0.208973 7.82043 0.626527L0.605803 8.08994C-0.201849 8.92569 -0.201977 10.2807 0.605675 11.1165L7.82028 18.5798C8.6282 19.4156 9.93816 19.4155 10.7461 18.5798C11.554 17.744 11.554 16.3889 10.746 15.5531Z" fill="CurrentColor"></path>
-                        </svg>
-                    </button>
+            </div>
+            
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front soft-black">
+                        <img src="image/Crime au Mont Saint-Michel/1.png" alt="Crime au Mont Saint-Michel">
+                        <div>[VR] CRIME AU MONT SAINT-MICHEL</div>
+                    </div>
+                    <div class="P_card_back">
+                        <div class="back_title soft-black">[VR] CRIME AU MONT SAINT-MICHEL</div>
+                        <div class="back_description"> Crime au Mont Saint-Michel is ...</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2024</div>
+                            <div class="tag"><div class="tag_dot"></div>Unity</div>
+                            <div class="tag"><div class="tag_dot"></div>Prototyping</div>
+                            <div class="tag"><div class="tag_dot"></div>System Design</div>
+                        </div>
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('Crime au Mont Saint-Michel')"> LEARN MORE </button></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front dark-yellow">
+                        <img src="image/Indiana Jones And The Lost City Of Atlantis/1.png" alt="Indiana Jones And The Lost City Of Atlantis">
+                        <div>INDIANA JONES AND THE LOST CITY OF ATLANTIS</div>
+                    </div>
+                    <div class="P_card_back">
+                        <div class="back_title dark-yellow">INDIANA JONES AND THE LOST CITY OF ATLANTIS</div>
+                        <div class="back_description"> Indiana Jones And The Lost City Of Atlantis is ...</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2024</div>
+                            <div class="tag"><div class="tag_dot"></div>Unity</div>
+                            <div class="tag"><div class="tag_dot"></div>Prototyping</div>
+                            <div class="tag"><div class="tag_dot"></div>Game design</div>
+                        </div>
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('Indiana Jones And The Lost City Of Atlantis')"> LEARN MORE </button></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front light-blue">
+                        <img src="image/Datamass/1.png" alt="DATAMASS">
+                        <div>DATAMASS</div>
+                    </div>
+                    <div class="P_card_back">
+                        <div class="back_title light-blue"> DATAMASS</div>
+                        <div class="back_description"> DATAMASS is ...</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2025</div>
+                            <div class="tag"><div class="tag_dot"></div>Solo</div>
+                            <div class="tag"><div class="tag_dot"></div>Unity</div>
+                            <div class="tag"><div class="tag_dot"></div>Prototyping</div>
+                            <div class="tag"><div class="tag_dot"></div>Game design</div>
+                            <div class="tag"><div class="tag_dot"></div>System Design</div>
+                        </div>
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('Datamass')"> LEARN MORE </button></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="P_card">
+                <div class="P_card_inner">
+                    <div class="P_card_front dark-green">
+                        <img src="image/Penitence/1.png" alt="Penitence">
+                        <div>PENITENCE</div>
+                    </div>
+                    <div class="P_card_back">
+                        <div class="back_title dark-green"> PENITENCE</div>
+                        <div class="back_description"> PENITENCE is ...</div>
+                        <div class="tags">
+                            <div class="tag"><div class="tag_dot"></div>2025</div>
+                            <div class="tag"><div class="tag_dot"></div>Unity</div>
+                            <div class="tag"><div class="tag_dot"></div>Prototyping</div>
+                            <div class="tag"><div class="tag_dot"></div>System Design</div>
+                        </div>
+                        <div class="cardButton"><button class="card_button" onclick="OpenOverlay('Penitence')"> LEARN MORE </button></div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- Professional -->
-
-        <div id="Professional" class="page tabcontent page_pro">
-            <div class="container_pro center">
-                <img class="img_pro" src="Image/fl.png" alt="">
-                <div class="container-full">
-                    <div class="container-dark center">
-                        <div class="text_pro center">Be-Air</div>
-                        <div class="center">Manuals Digitalization </div>
-                    </div>
-                    <div class="container-dark center">
-                        I helped Be-Air in the process of digitizing a dozen of aeronautics manuals, copying, layout, and rechecking each manuals.
-                    </div>
-                </div>
-                <div class="text_pro_year center">
-                    Summer 2022
-                </div>
-            </div>
-
-            <!--  -->
-
-            <div class="container_pro center">
-                <img class="img_pro" src="Image/corn.png" alt="">
-                <div class="container-full">
-                    <div class="container-dark center">
-                        <div class="text_pro center">in the fields</div>
-                        <div class="center">Corn Picker</div>
-                    </div>
-                    <div class="container-dark center">
-                        Nothing better than to pick corn in the good old fields. Without forgetting the good old scorching sun...
-                    </div>
-                </div>
-                <div class="text_pro_year center">
-                    Summer 2024
-                </div>
-            </div>
-
-            <!--  -->
-
-            <div class="container_pro center">
-                <img class="img_pro" src="Image/bandai_namco.png" alt="">
-                <div class="container-full">
-                    <div class="container-dark center">
-                        <!-- <div class="text_pro center">Bandai Namco</div> -->
-                        <div class="center">Content Analyst & Designer Assistant</div>
-                    </div>
-                    <div class="container-dark center">
-                        As a Content Analyst & Designer assistant I provided support and assistance in the evaluation and testing of video games for in house productions and publishing opportunities.
-                    </div>
-                </div>
-                <div class="text_pro_year center">
-                    2025- 2026
-                </div>
-            </div>
-
-            <!--  -->
-
-            <div class="container_pro">
-                <div class="container-full pro_together">
-                    <div class="container-dark content-max">
-                        <a href="https://www.linkedin.com/in/hector-rameau-04967622b/" target="_blank" class="content-max-height content-max-width">
-                            <button id="exploreNext" class="pushButton proButton content-max" type="button" role="contact" aria-selected="true">
-                                TOGETHER ?
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <div class="text_pro_year center">
-                    tomorrow
-                </div>
-            </div>
+            
+        <div class="page_title center" id="WORK">
+        <img src="Image/device_dots.png" alt="" class="page_title_device-dots__img">
+        PROFESSIONAL WORK
+        <img src="Image/device_dots.png" alt="" class="page_title_device-dots__img">
         </div>
 
-        <!--  -->
+        <div id="Professional Work" class="center PW">
 
-        <div id="About Me" class="page tabcontent center aboutme">
-            <div class="container_about_me center">
-                <div class="container-full center picture_border">
-                    <div class="container-dark picture_border">
-                        <img src="image/pic.png" alt="">
-                    </div>
+            <div class="PW-container">
+                <img src="image\fl.png">
+                <div class="PW-details">
+                    <div class="PW-details-company">BE-AIR</div>
+                    <div class="PW-details-title">Manual Digitalization</div>
+                    <div class="PW-date">Summer 2022</div>
                 </div>
-                <div class="container-full center">
-                    <div class="container-dark">
-                        <div class="aboutme_title">Game design</div>
-                        I specialize in game design. i can present systems, write documentation, and balance mecanics. 
-                    </div>
-                    <div class="container-dark">
-                        <div class="aboutme_text_title">Using : </div>
-                        <div class="aboutme_text">- Microsoft Office & Google Suite (c#) : excel, powerpoint...</div>
-                        <div class="aboutme_text">- Documentation tools : miro</div>
-                        <div class="aboutme_text">- production tools : hack & plan</div>
-                    </div>
-                </div>
-                <div class="container-full center">
-                    <div class="container-dark">
-                        <div class="aboutme_title">Development</div>
-                        <div class="aboutme_text">I can prototype and iterate on my ideas quickly.</div>
-                    </div>
-                    <div class="container-dark">
-                        <div class="aboutme_text_title">Using : </div>
-                        <div class="aboutme_text">- unity (c#)</div>
-                        <div class="aboutme_text">- Unreal Engine 5 (blueprints)</div>
-                        <div class="aboutme_text">- Versioning (git)</div>
-                    </div>
-                </div>
-                <div class="container-full center">
-                    <div class="container-dark">
-                        <div class="aboutme_title">Level design</div>
-                        I am able to sketch levels, integrate them in engine, and quickly iterate on them.
-                    </div>
+                <div class="PW-details-text">
+                    I helped Be-Air in the process of digitizing a dozen of aeronautics manuals, copying, layout, and rechecking each manuals.
                 </div>
             </div>
-            <div class="container-full aboutme_more">
-                <div class="container-dark content-max-width aboutme_title">
-                    Some of the things that I like... <small style="font-size: x-small;">If you want to know a bit more about me!</small>
+
+            <div class="PW-container">
+                <img src="image\corn.png">
+                <div class="PW-details">
+                    <div class="PW-details-company">4 Seasons</div>
+                    <div class="PW-details-title">Corn Picker</div>
+                    <div class="PW-date">Summer 2024</div>
                 </div>
-                <div class="container-dark content-max-width aboutme_list">
-                    <b style="color: var(--yellow);">Video games</b> | Bioshock, Factorio, Dishonored, Cyberpunk 2077, and a lot more.
-                </div>
-                <div class="container-dark content-max-width aboutme_list">
-                    <b style="color: var(--yellow);">Shows</b> | Last man, GOT, Arkane, House of Cards, The Batman, and a lot more
-                </div>
-                <div class="container-dark content-max-width aboutme_list">
-                    <b style="color: var(--yellow);">Music</b> | Classical, Jazz, games & movie music, white girl music. 
-                </div>
-                <div class="container-dark content-max-width aboutme_list">
-                    <b style="color: var(--yellow);">Traveling</b> | I went all around the world with my family, and i love to ride my bike.
+                <div class="PW-details-text">
+                    Nothing better than to pick corn in the good old fields. Without forgetting the good old scorching sun...
                 </div>
             </div>
+
+            <div class="PW-container">
+                <img src="image\bandai_namco.png">
+                <div class="PW-details">
+                    <div class="PW-details-company">Bandai Namco</div>
+                    <div class="PW-details-title">Content Analyst & Designer Assistant</div>
+                    <div class="PW-date">2025-2026</div>
+                </div>
+                <div class="PW-details-text">
+                    As a Content Analyst & Designer assistant I provided support and assistance in the evaluation and testing of video games for in house productions and publishing opportunities.
+                </div>
+            </div>
+
         </div>
+            
+        <div class="page_title center" id="ABOUT ME">
+        <img src="Image/device_dots.png" alt="" class="page_title_device-dots__img">
+        ABOUT ME
+        <img src="Image/device_dots.png" alt="" class="page_title_device-dots__img">
+        </div>
+
+        <div id="About Me" class="grid center">
+
+            <div class="AM-section">
+                <div class="AM-title">
+                    Game Designer & Developer
+                </div>
+                <div class="AM-line"></div>
+                <div class="AM-text">
+                    I specialize in game design. I can present systems, write documentation, and balance mechanics. And, I can prototype and iterate on my ideas quickly.
+                    I'm proeficient in the Microsoft Office Suite, Google Workspace, Unity, Unreal Engine 5, production tools like Jira, and Documentation tools like Miro.
+                </div>
+                <img class="page_title_device-dots__img" src="Image/device_dots.png" alt="">
+                <div class="AM-space"></div>
+            </div>
+
+            <div class="AM-section">
+                <div class="AM-title">
+                    Level Designer
+                </div>
+                <div class="AM-line"></div>
+                <div class="AM-text">
+                    I am able to sketch levels, integrate them in engine, and quickly iterate on them.
+                </div>
+                <img class="page_title_device-dots__img" src="Image/device_dots.png" alt="">
+                <div class="AM-space"></div>
+            </div>
+
+            <div class="AM-section">
+                <div class="AM-title">
+                    Favorite Games
+                </div>
+                <div class="AM-line"></div>
+                <div class="AM-text">
+                    Bioshock, Factorio, Dishonored, Cyberpunk 2077, and a lot more.
+                </div>
+                <img class="page_title_device-dots__img" src="Image/device_dots.png" alt="">
+                <div class="AM-space"></div>
+            </div>
+
+        </div>
+
+        <div class="end"></div>
 
         <!-- Scripts -->
 
-        <script src="csv.js"></script>
         <script>
-            let currentLoadPreviewController = null;
+            let currentIndex = 0;
+            let totalItems = 5; // Adjust based on number of media items
+            const spacing = 70; // Horizontal spacing between items
 
-            // Get the element with id="defaultOpen" and click on it
-            document.getElementById("defaultOpen").click();
-            
-            // Open Tab
-
-            function openTab(evt, tabName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(tabName).style.display = "flex";
-                evt.currentTarget.className += " active";
-            }
-
-            // Open CSV
-
-            async function getCSVRowByName(csvPath, nameValue) {
-                try {
-                    const parsed = await window.loadCSV(csvPath);
-                    if (!parsed || !parsed.rows) return null;
-
-                    // console.log('CSV Rows:', parsed.rows);
-                    // console.log('CSV Rows 0 name:', parsed.rows[0].name);
-                    
-                    // exact match loop
-                    for (let i = 0; i < parsed.rows.length; i++) {
-                        const r = parsed.rows[i];
-                        if ((r.name || '').trim() === nameValue) {
-                            row = r;
-                            // console.log('CSV found Row name:', row.name);
-
-                            // set elements
-                            // set title
-                            document.getElementById("title").innerText = row.name;
-
-                            // set preview first img or video
-                            LoadPreview(row.src, 0);
-
-                            // set tags
-                            removeTags();
-
-                            // set tags
-                            let tags = row.tags;
-                            const myTags = tags.split(", ");
-                            for(let i = 0; i < myTags.length; i++)
-                            {
-                                const tag = document.createElement("div");
-                                tag.classList.add("tag");
-
-                                const dot = document.createElement("div");
-                                dot.classList.add("tag_dot");
-
-                                const node = document.createTextNode(myTags[i]);
-                                
-                                tag.appendChild(dot);
-                                tag.appendChild(node);
-                                
-                                const tagsElements = document.getElementById("tags");
-                                tagsElements.appendChild(tag);
-                            }
-
-                            // set tasks
-                            removeTasks();
-                            let tasks = row.tasks;
-                            const myTasks = tasks.split(", ");
-                            for(let i = 0; i < myTasks.length; i++)
-                            {
-                                console.log(myTasks[i]);
-                                const task = document.createElement("div");
-                                task.classList.add("task");
-
-                                const node = document.createTextNode(myTasks[i]);                                
-                                task.appendChild(node);
-                                
-                                const tagsElements = document.getElementById("tasks");
-                                tagsElements.appendChild(task);
-                            }
-                            
-
-                            // set resume
-                            document.getElementById("resume").innerText = row.description;
-                            // document.getElementById("tasks").innerText = row.tasks;
-
-                            // set link
-                            if(row.link == "") {
-                                document.getElementById("link").disabled = true;
-                            } else {
-                                document.getElementById("link").disabled = false;
-                                document.getElementById("linkRef").target = "_blank";
-                                document.getElementById("linkRef").href = row.link;
-                                // document.getElementById("link").onclick = window.location.href = row.link;
-                            }
-
-                            // explore number
-                            document.getElementById("exploreNumber").innerText = (i+1) + "/" + parsed.rows.length;
-
-                            // next page
-                            if(i == parsed.rows.length-1) {
-                                document.getElementById("exploreNext").onclick = function () { getCSVRowByName(csvPath, parsed.rows[0].name); };
-                            } else {
-                                document.getElementById("exploreNext").onclick = function () { getCSVRowByName(csvPath, parsed.rows[i+1].name); };
-                            }
-
-                            // previous page
-                            if(i == 0) {
-                                document.getElementById("explorePrevious").onclick = function () { getCSVRowByName(csvPath, parsed.rows[parsed.rows.length-1].name); };
-                            } else {
-                                document.getElementById("explorePrevious").onclick = function () { getCSVRowByName(csvPath, parsed.rows[i-1].name); };
-                            }
-
-                            break;
-                        }
-                    }
-
-                    return parsed.rows.find(r => r.name === nameValue) || null;
-                } catch (e) {
-                    console.error('getCSVRowByName error:', e);
-                    return null;
-                }
-            }
-
-            function removeTags (){
-                var childNodes = document.getElementById('tags').childNodes;
-                for(var i=childNodes.length-1; i >= 0; i--){
-                    var childNode = childNodes[i];
-                    // console.log(childNode.className);
-                    if(childNode.className = 'tag')
-                    {
-                        childNode.remove();
-                        // childNode.parentNode.removeChild(childNode);
-                    }
-                }
-            }
-
-            function removeTasks (){
-                var childNodes = document.getElementById('tasks').childNodes;
-                for(var i=childNodes.length-1; i >= 0; i--){
-                    var childNode = childNodes[i];
-                    // console.log(childNode.className);
-                    if(childNode.className = 'task')
-                    {
-                        childNode.remove();
-                        // childNode.parentNode.removeChild(childNode);
-                    }
-                }
-            }
-
-            function removePreviewContent (){
-                var childNodes = document.getElementById('preview').childNodes;
-                for(var i=childNodes.length-1; i >= 0; i--){
-                    var childNode = childNodes[i];
-                    // console.log(childNode.className);
-                    if(childNode.className = 'previewContent')
-                    {
-                        childNode.remove();
-                        // childNode.parentNode.removeChild(childNode);
-                    }
-                }
-            }
-            
-            async function LoadPreview(urls, index)
-            {
-                removePreviewContent();
-                // console.log(urls);
-
-                // No Urls => add wip image
-                if(urls == " ")
-                {
-                    const img = document.createElement("img");
-                    img.src = "image/wip.png";
-                    img.classList.add("previewContent");
-                    document.getElementById("preview").appendChild(img);
+            function updateCarousel() {
+                const items = document.querySelectorAll('.carousel-track > div');
+                const trackElement = document.querySelector('.overlay-medias');
+                const centerX = trackElement.offsetWidth / 2; // Dynamic center based on actual width
+                console.log('=== updateCarousel START ===');
+                console.log('totalItems=', totalItems, 'currentIndex=', currentIndex, 'items.length=', items.length);
+                console.log('trackElement.offsetWidth=', trackElement.offsetWidth, 'centerX=', centerX, 'spacing=', spacing);
+                
+                if (items.length === 0) {
+                    console.log('WARNING: No carousel items found!');
                     return;
                 }
                 
-                document.getElementById("previewPrevious").disabled = true;
-                document.getElementById("previewNext").disabled = true;
-                
-                // Urls => select index url
-                const myUrls = urls.split(", ");
-                for(let i = 0; i < myUrls.length; i++)
-                {
-                    var url = myUrls[i]
-                    console.log(url + " | " + i);
-
-                    if(i == index) {
-                        const splitUrl = url.split(".");
-                        console.log(url + " | selected");
-
-                        // set preview
-
-                        if(splitUrl[1] == "png") { // Select png
-                            const img = document.createElement("img");
-                            img.src = "image/" + url;
-                            img.classList.add("previewContent");
-                            document.getElementById("preview").appendChild(img);
-                        } else if(splitUrl[1] == "mp4") { // Select mp4
-                            const vid = document.createElement("video");
-                            vid.src = "image/" + url;
-                            vid.classList.add("previewContent");
-                            vid.autoplay = true;
-                            vid.controls = true;
-                            vid.muted = true;
-                            document.getElementById("preview").appendChild(vid);
-                        }
-
-                        // set button
-
-                        if(i == 0) { // previous button
-                            document.getElementById("previewPrevious").disabled = true;
-                        } else {
-                            document.getElementById("previewPrevious").disabled = false;
-                            document.getElementById("previewPrevious").onclick = function () { LoadPreview(urls, (i - 1)); };
-                        }
-
-                        if((i + 1) < myUrls.length) { // next button
-                            document.getElementById("previewNext").disabled = false;
-                            document.getElementById("previewNext").onclick = function () { LoadPreview(urls, (i + 1)); };
-                        } else {
-                            document.getElementById("previewNext").disabled = true;
-                        }
-
-                        return;
+                items.forEach((item, i) => {
+                    const scale = i === currentIndex ? 1 : 0.8;
+                    const relative = (i - currentIndex + totalItems) % totalItems;
+                    const adjustedRelative = relative > totalItems / 2 ? relative - totalItems : relative;
+                    const itemCenter = centerX + adjustedRelative * spacing;
+                    let fullWidth = item.offsetWidth;
+                    
+                    // If item width is 0 (not loaded), use a default width for positioning
+                    if (fullWidth === 0) {
+                        fullWidth = 150; // Default width
                     }
+                    
+                    const x = itemCenter - (fullWidth / 2);
+                    const diff = Math.abs(adjustedRelative);
+                    const opacity = diff > 1 ? '0' : '1';
+                    const zIndex = i === currentIndex ? '10' : '1';
+                    const filter = i === currentIndex ? 'none' : 'grayscale(50%) brightness(0.8)';
+                    
+                    item.style.transform = `translate(${x}px, 0) scale(${scale})`;
+                    item.style.filter = filter;
+                    item.style.opacity = opacity;
+                    item.style.zIndex = zIndex;
+                    
+                    console.log(`ITEM ${i}: isCurrent=${i === currentIndex}, relative=${relative}, adjusted=${adjustedRelative}, offsetWidth=${item.offsetWidth}, fullWidth=${fullWidth}, x=${x}, opacity=${opacity}, zIndex=${zIndex}`);
+                });
+                console.log('=== updateCarousel END ===');
+            }
+
+            function slideCarousel(direction) {
+                currentIndex += direction;
+                if (currentIndex < 0) currentIndex = totalItems - 1;
+                if (currentIndex >= totalItems) currentIndex = 0;
+                updateCarousel();
+            }
+
+            async function OpenOverlay(dataToLoad) {
+                // Prevent page scrolling
+                document.body.style.overflow = 'hidden';
+
+                // Show loading spinner
+                document.getElementById('loadingSpinner').style.display = 'flex';
+
+                // Reset currentIndex
+                currentIndex = 0;
+                
+                // Show overlay background but hide the panel content until media loads
+                document.querySelector('.overlay').style.display = 'flex';
+                document.querySelector('.overlay-panel').style.display = 'none';
+                
+                // Load project data and media
+                loadProjectData(dataToLoad);
+                await loadProjectMedia(dataToLoad);
+                updateCarousel();
+            }
+
+            async function loadProjectData(projectName) {
+                try {
+                    // Try personal.csv first
+                    let csvPath = 'personal.csv';
+                    let parsed = await window.loadCSV(csvPath);
+                    let projectData = parsed.rows.find(r => r.name === projectName);
+                    
+                    // If not found, try school.csv
+                    if (!projectData) {
+                        csvPath = 'school.csv';
+                        parsed = await window.loadCSV(csvPath);
+                        projectData = parsed.rows.find(r => r.name === projectName);
+                    }
+                    
+                    if (projectData) {
+                        // Set title
+                        document.querySelector('.overlay-title').innerText = projectData.name;
+                        
+                        // Set description
+                        document.querySelectorAll('.overlay-container-text')[0].innerText = projectData.description;
+                        
+                        // Set contributions
+                        document.querySelectorAll('.overlay-container-text')[1].innerText = projectData.tasks;
+                        
+                        // Handle link button - show container only if link exists
+                        const linkBtn = document.querySelector('.overlay-link-btn');
+                        const linkContainer = document.querySelector('.overlay-link-container');
+                        
+                        if (projectData.link && projectData.link.trim() !== '') {
+                            linkContainer.style.display = 'block';
+                            linkBtn.onclick = () => window.open(projectData.link, '_blank');
+                        } else {
+                            linkContainer.style.display = 'none';
+                        }
+                    }
+                } catch (e) {
+                    console.error('Error loading project data:', e);
                 }
             }
+
+            async function loadProjectMedia(projectName) {
+                console.log('loadProjectMedia called for:', projectName);
+                
+                const carouselTrack = document.querySelector('.carousel-track');
+
+                let mediaFiles = [];
+
+                // Try to load media manifest file
+                async function loadMediaManifest() {
+                    try {
+                        // Load index.json from project folder
+                        const manifestPath = `image/${projectName}/index.json`;
+                        const response = await fetch(manifestPath);
+                        
+                        if (response.ok) {
+                            const manifest = await response.json();
+                            mediaFiles = manifest.media || [];
+                            console.log('Manifest found for', projectName, '- files:', mediaFiles);
+                        } else {
+                            console.log('No manifest found for', projectName);
+                        }
+                    } catch (e) {
+                        console.log('Error loading manifest:', e);
+                    }
+                    
+                    console.log('Final mediaFiles to load:', mediaFiles);
+                }
+
+                function addCarouselItem(mediaSrc, type) {
+                    const div = document.createElement('div');
+                    const container = document.createElement('div');
+                    container.className = 'overlay-media-container';
+                    const screen = document.createElement('div');
+                    screen.className = 'overlay-media-screen';
+
+                    if (type === 'video') {
+                        const video = document.createElement('video');
+                        video.src = mediaSrc;
+                        video.controls = true;
+                        video.muted = true;
+                        screen.appendChild(video);
+                    } else {
+                        const img = document.createElement('img');
+                        img.src = mediaSrc;
+                        img.alt = 'Preview Image';
+                        screen.appendChild(img);
+                    }
+
+                    container.appendChild(screen);
+                    div.appendChild(container);
+                    carouselTrack.appendChild(div);
+                }
+
+                // Load media and wait for completion
+                await loadMediaManifest();
+
+                console.log('Populating carousel with', mediaFiles.length, 'files');
+
+                // Clear ALL carousel items (including scroll-start)
+                carouselTrack.innerHTML = '';
+                
+                // Add all media files as new carousel items
+                if (mediaFiles.length > 0) {
+                    mediaFiles.forEach(file => {
+                        const ext = file.split('.').pop().toLowerCase();
+                        const type = ['mp4', 'webm'].includes(ext) ? 'video' : 'img';
+                        addCarouselItem(`image/${projectName}/${file}`, type);
+                    });
+                    totalItems = mediaFiles.length;
+                } else {
+                    // No files found, add single wip.png
+                    addCarouselItem('image/wip.png', 'img');
+                    totalItems = 1;
+                }
+
+                // Update totalItems to reflect actual loaded items
+                totalItems = document.querySelectorAll('.carousel-track > div').length;
+                currentIndex = 0; // Always reset to first item when loading new project
+                console.log('Total items in carousel:', totalItems, 'currentIndex reset to 0');
+                
+                // Reset scroll position
+                const overlayMedias = document.querySelector('.overlay-medias');
+                overlayMedias.scrollLeft = 0;
+                
+                // Give DOM a moment to render before calculating positions
+                await new Promise(resolve => setTimeout(resolve, 50));
+                
+                // Update carousel positioning immediately (don't wait for images)
+                updateCarousel();
+                
+                // Show overlay panel now that layout is ready
+                document.querySelector('.overlay-panel').style.display = 'flex';
+                document.getElementById('loadingSpinner').style.display = 'none';
+                console.log('Media loading complete');
+            }
+
+            function HideOverlay() {
+                // console.log('HideOverlay called');
+                // Restore page scrolling
+                document.body.style.overflow = 'auto';
+
+                // Hide the overlay
+                document.querySelector('.overlay').style.display = 'none';
+            }
+
+            // Close overlay when clicking on the backdrop
+            window.addEventListener('DOMContentLoaded', function() {
+                updateCarousel(); // Initialize carousel positions
+
+                document.querySelector('.overlay').addEventListener('click', function(e) {
+                    // console.log('Overlay clicked, target:', e.target, 'this:', this);
+                    if (e.target === this) {
+                        console.log('Closing overlay');
+                        HideOverlay();
+                    }
+                });
+
+                // Enable horizontal scrolling with mouse wheel on overlay-panel
+                document.querySelector('.overlay-medias').addEventListener('wheel', function(e) {
+                    if (e.target.closest('.overlay-medias')) {
+                        e.preventDefault();
+                        document.querySelector('.overlay-medias').scrollTop += e.deltaX;
+                    }
+                });
+            });
         </script>
+
+        <script src="csv.js"></script>
     </section>
+
+    <!-- Modal -->
+    <div class="overlay">
+        <div class="overlay-panel">
+            <div class="dot-left-up"></div>
+            <div class="dot-left-down"></div>
+            <div class="dot-right-up"></div>
+            <div class="dot-right-down"></div>
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner"></div>
+            </div>
+            <div class="overlay-title">
+                title
+            </div>
+            <div class="media-carousel">
+                <div class="carousel-btn-container"><button class="carousel-btn prev-btn" onclick="slideCarousel(-1)">&lt;</button></div>
+                <div class="overlay-medias">
+                    <div class="carousel-track">
+                        <div class="scroll-start"><div class="overlay-media-container"><div class="overlay-media-screen"><img src="image/wip.png" alt="Preview Image"></div></div></div>
+                        <div><div class="overlay-media-container"><div class="overlay-media-screen"><img src="image/wip.png" alt="Preview Image"></div></div></div>
+                        <div><div class="overlay-media-container"><div class="overlay-media-screen"><img src="image/wip.png" alt="Preview Image"></div></div></div>
+                        <div><div class="overlay-media-container"><div class="overlay-media-screen"><img src="image/wip.png" alt="Preview Image"></div></div></div>
+                        <div><div class="overlay-media-container"><div class="overlay-media-screen"><img src="image/wip.png" alt="Preview Image"></div></div></div>
+                        <div><div class="overlay-media-container"><div class="overlay-media-screen"><img src="image/wip.png" alt="Preview Image"></div></div></div>
+                    </div>
+                </div>
+                <div class="carousel-btn-container"><button class="carousel-btn next-btn" onclick="slideCarousel(1)">&gt;</button></div>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay-container-title">Description</div>
+                <div class="overlay-container-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    In porta eu erat a tempus. 
+                    Praesent bibendum urna augue, sed ultrices tortor mollis euismod. 
+                    Cras faucibus lacinia nisl, ut tincidunt eros fringilla et. 
+                    Fusce ipsum orci, molestie in laoreet ac, lobortis eget metus.
+                </div>
+                <div class="overlay-container-title">My Contributions</div>
+                <div class="overlay-container-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    In porta eu erat a tempus. 
+                    Praesent bibendum urna augue, sed ultrices tortor mollis euismod. 
+                    Cras faucibus lacinia nisl, ut tincidunt eros fringilla et. 
+                    Fusce ipsum orci, molestie in laoreet ac, lobortis eget metus. 
+                    Mauris ac rutrum orci, eget hendrerit massa. Donec lobortis tincidunt condimentum.
+                </div>
+            </div>
+            <div class="overlay-link-container"><button class="overlay-link-btn">Link</button></div>
+        </div>
+    </div>
+
 </body>
 </html>
