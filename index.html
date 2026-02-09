@@ -364,7 +364,7 @@
         <div id="Professional Work" class="center PW">
 
             <div class="PW-container">
-                <img src="image/fl.png">
+                <img src="Image/fl.png">
                 <div class="PW-details">
                     <div class="PW-details-company">BE-AIR</div>
                     <div class="PW-details-title">Manual Digitalization</div>
@@ -376,7 +376,7 @@
             </div>
 
             <div class="PW-container">
-                <img src="image/corn.png">
+                <img src="Image/corn.png">
                 <div class="PW-details">
                     <div class="PW-details-company">4 Seasons</div>
                     <div class="PW-details-title">Corn Picker</div>
@@ -388,7 +388,7 @@
             </div>
 
             <div class="PW-container">
-                <img src="image/bandai_namco.png">
+                <img src="Image/bandai_namco.png">
                 <div class="PW-details">
                     <div class="PW-details-company">Bandai Namco</div>
                     <div class="PW-details-title">Content Analyst & Designer Assistant</div>
@@ -528,9 +528,16 @@
             async function loadProjectData(projectName) {
                 try {
                     // Try personal.csv first
-                    let csvPath = 'personal.csv';
+                    let csvPath = 'portfolio - portfolio.csv';
                     let parsed = await window.loadCSV(csvPath);
                     let projectData = parsed.rows.find(r => r.name === projectName);
+
+                    // If not found, try school.csv
+                    if (!projectData) {
+                        csvPath = 'personal.csv';
+                        parsed = await window.loadCSV(csvPath);
+                        projectData = parsed.rows.find(r => r.name === projectName);
+                    }
                     
                     // If not found, try school.csv
                     if (!projectData) {
