@@ -10,43 +10,69 @@
 </head>
 <body>
     <section class="header" role="banner">
-        <div class="name">
-            <div class="text">Hector Rameau</div>
-            <img src="Image/device_dots.png" alt="" class="device-dots__img">
+        <!-- Left: Title and dots -->
+        <div class="header-left">
+            <div class="name">
+                <div class="text">Hector Rameau</div>
+                <img src="Image/device_dots.png" alt="" class="device-dots__img">
+            </div>
+            <button class="header-dropdown-btn" id="headerDropdownBtn" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
         </div>
 
-        <!-- buttons must be children of .tabs -->
-        <div class="tabs" role="tablist" aria-label="Sections">
-            <div class="small-screws">
-                <div class="small-screw-blue"></div>
+        <!-- Middle: Tabs with dropdown button for mobile -->
+        <div class="header-middle">
+            <!-- Decorative screws at corners -->
+            <div class="small-screws screws-top-left">
                 <div class="small-screw-blue"></div>
             </div>
-            <button class="tablinks" onclick="document.getElementById('HIGHLIGHTS').scrollIntoView({behavior: 'smooth'});">Highlights</button>
-            <button class="tablinks" onclick="document.getElementById('PROJECTS').scrollIntoView({behavior: 'smooth'});">Personal Projects</button>
-            <button class="tablinks" onclick="document.getElementById('SCHOOL').scrollIntoView({behavior: 'smooth'});">School Projects</button>
-            <button class="tablinks" onclick="document.getElementById('WORK').scrollIntoView({behavior: 'smooth'});">Professional Work</button>
-            <button class="tablinks" onclick="document.getElementById('ABOUT ME').scrollIntoView({behavior: 'smooth'});">About Me</button>
 
-            <div class="small-screws">
+            <!-- buttons must be children of .tabs -->
+            <div class="tabs" role="tablist" aria-label="Sections" id="headerTabs">
+                <button class="tablinks" onclick="document.getElementById('HIGHLIGHTS').scrollIntoView({behavior: 'smooth'});">Highlights</button>
+                <button class="tablinks" onclick="document.getElementById('PROJECTS').scrollIntoView({behavior: 'smooth'});">Personal Projects</button>
+                <button class="tablinks" onclick="document.getElementById('SCHOOL').scrollIntoView({behavior: 'smooth'});">School Projects</button>
+                <button class="tablinks" onclick="document.getElementById('WORK').scrollIntoView({behavior: 'smooth'});">Professional Work</button>
+                <button class="tablinks" onclick="document.getElementById('ABOUT ME').scrollIntoView({behavior: 'smooth'});">About Me</button>
+            </div>
+
+            <!-- Decorative screws at corners -->
+            <div class="small-screws screws-top-right">
                 <div class="small-screw-blue"></div>
+            </div>
+
+            <!-- Decorative screws at bottom corners -->
+            <div class="small-screws screws-bottom-left">
+                <div class="small-screw-blue"></div>
+            </div>
+
+            <div class="small-screws screws-bottom-right">
                 <div class="small-screw-blue"></div>
             </div>
         </div>
 
-        <div class="contact">
-            <a href="https://www.linkedin.com/in/hector-rameau-04967622b/" target="_blank" class="content-max-height content-max-width">
-                <button class="pushButton contactButton" title="go to linkedin" type="button" role="contact" aria-selected="true">Contact</button>
-            </a>
-        </div>
-        <div class="contact">
-            <a href="[EN] RESUME - hector rameau.pdf" class="content-max-height content-max-width" download>
-                <button class="pushButton contactButton center" title="go to linkedin" type="button" role="contact" aria-selected="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.29em" viewBox="0 0 23 20" fill="none">
-                        <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="CurrentColor" fill="CurrentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    CV
-                </button>
-            </a>
+        <!-- Right: Contact buttons -->
+        <div class="header-right" id="headerContactButtons">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/hector-rameau-04967622b/" target="_blank" class="content-max-height content-max-width">
+                    <button class="pushButton contactButton" title="go to linkedin" type="button" role="contact" aria-selected="true">Contact</button>
+                </a>
+            </div>
+            <div class="contact">
+                <a href="[EN] RESUME - hector rameau.pdf" class="content-max-height content-max-width" download>
+                    <button class="pushButton contactButton center" title="go to linkedin" type="button" role="contact" aria-selected="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.29em" viewBox="0 0 23 20" fill="none">
+                            <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="CurrentColor" fill="CurrentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        CV
+                    </button>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -533,18 +559,18 @@
                     let projectData = parsed.rows.find(r => r.name === projectName);
 
                     // If not found, try school.csv
-                    if (!projectData) {
-                        csvPath = 'personal.csv';
-                        parsed = await window.loadCSV(csvPath);
-                        projectData = parsed.rows.find(r => r.name === projectName);
-                    }
+                    // if (!projectData) {
+                    //     csvPath = 'personal.csv';
+                    //     parsed = await window.loadCSV(csvPath);
+                    //     projectData = parsed.rows.find(r => r.name === projectName);
+                    // }
                     
                     // If not found, try school.csv
-                    if (!projectData) {
-                        csvPath = 'school.csv';
-                        parsed = await window.loadCSV(csvPath);
-                        projectData = parsed.rows.find(r => r.name === projectName);
-                    }
+                    // if (!projectData) {
+                    //     csvPath = 'school.csv';
+                    //     parsed = await window.loadCSV(csvPath);
+                    //     projectData = parsed.rows.find(r => r.name === projectName);
+                    // }
                     
                     if (projectData) {
                         // Set title
@@ -554,7 +580,7 @@
                         document.querySelectorAll('.overlay-container-text')[0].innerText = projectData.description;
                         
                         // Set contributions
-                        document.querySelectorAll('.overlay-container-text')[1].innerText = projectData.tasks;
+                        document.querySelectorAll('.overlay-container-text')[1].innerText = projectData['My contribution'];
                         
                         // Handle link button - show container only if link exists
                         const linkBtn = document.querySelector('.overlay-link-btn');
@@ -679,6 +705,39 @@
 
             // Close overlay when clicking on the backdrop
             window.addEventListener('DOMContentLoaded', function() {
+                // Header dropdown functionality for mobile
+                const dropdownBtn = document.getElementById('headerDropdownBtn');
+                const headerTabs = document.getElementById('headerTabs');
+                const headerContactButtons = document.getElementById('headerContactButtons');
+
+                if (dropdownBtn) {
+                    dropdownBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                        this.setAttribute('aria-expanded', !isExpanded);
+                        headerTabs.classList.toggle('expanded');
+                        headerContactButtons.classList.toggle('expanded');
+                    });
+
+                    // Close dropdown when clicking on a tab
+                    document.querySelectorAll('.tabs .tablinks').forEach(tab => {
+                        tab.addEventListener('click', function() {
+                            dropdownBtn.setAttribute('aria-expanded', 'false');
+                            headerTabs.classList.remove('expanded');
+                            headerContactButtons.classList.remove('expanded');
+                        });
+                    });
+
+                    // Close dropdown when clicking outside header
+                    document.addEventListener('click', function(e) {
+                        if (!e.target.closest('.header')) {
+                            dropdownBtn.setAttribute('aria-expanded', 'false');
+                            headerTabs.classList.remove('expanded');
+                            headerContactButtons.classList.remove('expanded');
+                        }
+                    });
+                }
+
                 updateCarousel(); // Initialize carousel positions
 
                 document.querySelector('.overlay').addEventListener('click', function(e) {
