@@ -1313,8 +1313,28 @@ html,body{
   background-color: rgba(0, 0, 0, 0.7);  /* Dimmed background */
   display: none;  /* Hidden by default */
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   z-index: 1000;  /* On top of other content */
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 40px 0;
+}
+
+.overlay::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overlay::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay::-webkit-scrollbar-thumb {
+  background: var(--soft-black);
+  border-radius: 10px;
+}
+
+.overlay::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
 }
 
 .overlay-panel {
@@ -1326,28 +1346,20 @@ html,body{
   border-radius: 10px;
   max-width: 800px;
   width: 90%;
-  max-height: 90%;
   position: relative;
   color: var(--white-smoke);
 
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
-  /* Hide scroll bar */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  flex-shrink: 0;
 }
 
-.overlay-panel::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
-
-.overlay-panel:hover {
+/* .overlay-panel:hover {
   background-color: var(--soft-black);
   border: 1px solid var(--white-smoke);
   transition: border-color .2s, background-color .2s;
-}
+} */
 
 .overlay-title {
   color: var(--white-smoke);
@@ -1446,7 +1458,7 @@ html,body{
 }
 
 .overlay-container-title {
-  color: var(--soft-black);
+  color: var(--yellow);
   font-family: Roboto, sans-serif;
   font-weight: 800;
   letter-spacing: 1.5px;
@@ -1458,6 +1470,17 @@ html,body{
   color: var(--white-smoke);
   padding: 10px;
   border-radius: 10px;
+  border: 1px solid var(--medium-black);
+  transition: border-color .1s ease;
+}
+
+.overlay-container-text:hover {
+  border-color: var(--white-smoke);
+  transition: border-color .1s ease;
+}
+
+.overlay-container-text .tag {
+  background-color: var(--dark-black);
 }
 
 /* =================================================================================== */
@@ -1559,12 +1582,12 @@ html,body{
   align-items: center;
 }
 
-.PW-container:hover {
+/* .PW-container:hover {
   background-color: var(--soft-black);
   border: 1px solid var(--white-smoke);
 
   transition: border-color .2s, background-color .2s;
-}
+} */
 
 .PW-container > img {
   flex-shrink: 0;

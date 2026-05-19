@@ -600,11 +600,25 @@
                         // Set title
                         document.querySelector('.overlay-title').innerText = projectData.name;
                         
+                        // Set tags
+                        const tagsContainer = document.querySelectorAll('.overlay-container-text')[0];
+                        tagsContainer.innerHTML = '';
+                        if (projectData.tags) {
+                            // Split tags by comma and create tag elements
+                            const tags = projectData.tags.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0);
+                            tags.forEach(tag => {
+                                const tagDiv = document.createElement('div');
+                                tagDiv.className = 'tag';
+                                tagDiv.innerHTML = '<div class="tag_dot"></div>' + tag;
+                                tagsContainer.appendChild(tagDiv);
+                            });
+                        }
+                        
                         // Set description
-                        document.querySelectorAll('.overlay-container-text')[0].innerText = projectData.description;
+                        document.querySelectorAll('.overlay-container-text')[1].innerText = projectData.description;
                         
                         // Set contributions
-                        document.querySelectorAll('.overlay-container-text')[1].innerText = projectData['My contribution'];
+                        document.querySelectorAll('.overlay-container-text')[2].innerText = projectData['My contribution'];
                         
                         // Handle link button - show container only if link exists
                         const linkBtn = document.querySelector('.overlay-link-btn');
@@ -614,6 +628,7 @@
                             linkContainer.style.display = 'block';
                             linkBtn.onclick = () => window.open(projectData.link, '_blank');
                         } else {
+                            // TEST !!!!!!
                             linkContainer.style.display = 'none';
                         }
                     }
@@ -812,9 +827,23 @@
                 </div>
                 <div class="carousel-btn-container"><button class="carousel-btn next-btn" onclick="slideCarousel(1)">&gt;</button></div>
             </div>
+            <div class="overlay-panel-close-container"><button class="overlay-close-btn" onclick="HideOverlay()">Close</button></div>
             <div class="overlay-container">
+                <div class="overlay-container-title">Tags</div>
+                <div class="overlay-container-text">
+                    <!-- <div class="tag"><div class="tag_dot"></div>2024</div>
+                    <div class="tag"><div class="tag_dot"></div>Unity</div>
+                    <div class="tag"><div class="tag_dot"></div>Prototyping</div>
+                    <div class="tag"><div class="tag_dot"></div>Game design</div>
+                    <div class="tag"><div class="tag_dot"></div>Game Jam</div> -->
+                </div>
                 <div class="overlay-container-title">Description</div>
                 <div class="overlay-container-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    In porta eu erat a tempus. 
+                    Praesent bibendum urna augue, sed ultrices tortor mollis euismod. 
+                    Cras faucibus lacinia nisl, ut tincidunt eros fringilla et. 
+                    Fusce ipsum orci, molestie in laoreet ac, lobortis eget metus.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     In porta eu erat a tempus. 
                     Praesent bibendum urna augue, sed ultrices tortor mollis euismod. 
@@ -829,9 +858,16 @@
                     Cras faucibus lacinia nisl, ut tincidunt eros fringilla et. 
                     Fusce ipsum orci, molestie in laoreet ac, lobortis eget metus. 
                     Mauris ac rutrum orci, eget hendrerit massa. Donec lobortis tincidunt condimentum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    In porta eu erat a tempus. 
+                    Praesent bibendum urna augue, sed ultrices tortor mollis euismod. 
+                    Cras faucibus lacinia nisl, ut tincidunt eros fringilla et. 
+                    Fusce ipsum orci, molestie in laoreet ac, lobortis eget metus. 
+                    Mauris ac rutrum orci, eget hendrerit massa. Donec lobortis tincidunt condimentum.
                 </div>
             </div>
             <div class="overlay-link-container"><button class="overlay-link-btn">Link</button></div>
+            <div class="overlay-panel-close-container"><button class="overlay-close-btn" onclick="HideOverlay()">Close</button></div>
         </div>
     </div>
 
