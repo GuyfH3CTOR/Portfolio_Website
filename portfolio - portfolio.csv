@@ -55,7 +55,15 @@ It was a great experience. Sadly, I still didn’t have enough experience with b
 
 I really liked this project, and I may one day redo it using Unity or Godot, as I got more familiar with them.",
 Summoner's Clash,"gamejam, gamedev, unity, c#, pixel art","Summoner's Clash is a game made for the Ludum Dare 55 Game Jam. Picks cards and find the right combos to destroy your opponent before he does.
-","Create the pixel art, Implement design decision in Unity, program the game",https://guyfh3ctor.itch.io/summoners-clash
+","Summoner's clash was made in about 2-3 days. At first we were supposed to be 3 or 4 people working on it. I ended up writing all the code and doing all the artwork (i did not expect that), and my colleague tried to create cards.
+
+Anyway, the game is all about summoning spells in order to render your opponent, an AI, incapacitated. At first, we wanted to draw shapes to summon the spells, but it was not technically feasible with our skills, so we went back and tried cards, it worked, and it was kinda fun, however, card combinations are not clear which makes it impossible for players to remember it. 
+
+As of today, I would change a few things : 
+* Add an encyclopedia of used combinations.
+* Create spell types fire, water, void, etc… with different effect based on the number of cards of the type used, 2 fire = fireball or 3 fire = hellfire.
+* Create combinations based on spell types (fire + water = steam, void + water = ice, etc …).
+* Create additional effects which influence the receiving actor (slow summoning time, slow down cursor, redraw all cards, etc…).",https://guyfh3ctor.itch.io/summoners-clash
 Belleville,"unity, game design","Belleville is a immersive sim with metroidvania elements concept currently being prototyped.
 you can find the complete pitch in the link below.","In 2025, I replayed Dishonored 1 & 2 and I discovered metroidvania games with hollow knight : Silksong and MIO : memories in orbit. I loved both of those games very deeply, how I interacted with the worlds, the consequences of my actions, the discovery of mysteries and the lore, story and all the things around it.
 
@@ -68,4 +76,6 @@ The player will take control of a doll (une poupée) who woke up after its body 
 Your body is a template and can be altered to use a mysterious resource which allows you to use powers beyond understanding and even go back in time (ressource based save system).
 
 As of now, I created a prototype for the character movement, but most of it is still in development.",https://docs.google.com/presentation/d/1EnsD9qNZP1jYCgj9-HwsdTD6Vea5ejuPdYu8bBiKINs/edit?usp=sharing
-This website,"html, css, javascript",I wanted a beautifull portfolio made by my own hands.,pretty much every thing you are currently seeing,
+This website,"html, css, javascript",I wanted a beautifull portfolio made by my own hands.,"I always wanted to try and create a website from scratch. This is it !
+It was not easy, this is probably the V3.4, but I learned a lot about HTML5, css and javascript.
+I also used the creation of this website in order to learn how to use AI tools to explain or plan what I must do. It is great to summarize problems, but not a lot for easy to read and reuse code. But it is great for autocompleted comments.",
