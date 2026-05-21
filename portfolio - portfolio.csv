@@ -33,7 +33,7 @@ Penitence,"gamedev, unity, c#, game design, pixel art","Embark on a journey of p
 This was an end of school project with only 3 game designers, and me as the only programmer.
 
 I was able to implement : 
-An inventory system with equippable items based on the player skills.
+* An inventory system with equippable items based on the player skills.
 * A skill system which can be influenced by the player's actions.
 * A field of view and a A* pathfinding for the player and npcs.
 * A dialogue system.
