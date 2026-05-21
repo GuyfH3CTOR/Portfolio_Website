@@ -39,7 +39,16 @@ Each unit also has a billboard for easy identification.FOR OF WARI didn’t want
 CONCLUSION
 In the end, all the essential systems for the game were implemented, and 2 players could play against each other. However, by the time I had to turn in my game as an end of year personnel project and continue to work on my end of school group project, I did not have the time to balance the game and fix many of the minor bugs still laying around. But overall I am pretty happy with what I was able to create in about 1 month as a side project.",
 DYSON SPHERE INITIATIVE,"gamedev, UE5, art","Dyson Sphere Initiative is a small UI project for a idle game, inspired by the game ExoMiner, and made at the end of the 2023 summer to train myself in making UI, using unreal engine 5 widgets.
-","UI design, Implement the UI in UE5 widgets",
+","I love idle games. I love when numbers go up. and I love science fiction.
+
+During my first year at Brassart toulouse, I was obsessed with a little idle game called Exominer where the player's only goal is to upgrade its mining operation. When summer came, I just started reading Energy And Civilization by Vacliv Smil and it made me want to create an idle game about energy generation. And nothing generates more energy than a dyson sphere. So I started working on a little game about mining planets, transporting ressources, refining them, and building a dyson sphere with the end goal of compressing the sun to make a black hole with infinite energy (the dream). 
+
+When I started working on the game, I just started learning Unreal Engine 5, and finished my first game in group (Hellscape). 
+I loved working with UE5 widgets and I wanted to create a really good UI/UX experience. Everything you can see in DSI was handmade by me using Adobe Illustrator and animated using UE5 widgets. 
+
+It was a great experience. Sadly, I still didn’t have enough experience with blueprints and programming in general so I kept getting stuck with the save system, data elements, and general programming questions.
+
+I really liked this project, and I may one day redo it using Unity or Godot, as I got more familiar with them.",
 Summoner's Clash,"gamejam, gamedev, unity, c#, pixel art","Summoner's Clash is a game made for the Ludum Dare 55 Game Jam. Picks cards and find the right combos to destroy your opponent before he does.
 ","Create the pixel art, Implement design decision in Unity, program the game",https://guyfh3ctor.itch.io/summoners-clash
 Belleville,"unity, game design","Belleville is a immersive sim with metroidvania elements concept currently being prototyped.
