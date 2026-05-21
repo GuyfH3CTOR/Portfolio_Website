@@ -6,7 +6,12 @@ Indiana Jones And The Lost City Of Atlantis,"gamedev, game design, unity, c#","T
 Crime au Mont Saint-Michel,"gamedev, unity, c#, VR","CRIME au mont saint-michel is a short detective VR game, which take place in... you wouldn't guess... ""Mont Saint-Michel"". It was made by a groupe of 3 game designers in about 3 weeks, during my second year of game design at Brassart.
 ","Pitching gameplay features, Solo programming of VR features",
 Darkest Night,"gamedev, unity, c#, pixel art, game design","The Darkest Night is a horror arcade game. The player's goal is to, firstly not die, and secondly get as many points as possible. It was made as an end of year SOLO project, in about 2 weeks of work.
-","Solo programming, Pixel art drawing",https://guyfh3ctor.itch.io/darkest-night
+","Darkest night was made as an end of second year solo project with two themes : Horror / Racing Game. 
+At first, I was not inspired. Who is ?A racing game is pretty straight forward, but mixed with horror … I could not find a single idea on how to get something other than aesthetically. I wanted to create something which really integrated horror in its gameplay mechanics. But then, I remembered arcade games and infinite runners and I thought that by mixing both of them with unique mechanics which can create tension with the player action, it could work.
+
+My first step was to create a 2D vehicle, which worked correctly but was really frustrating when hitting walls (it was never fixed, but if I had to rework it today, I would not make it bounce on walls, but instead reorient the car in the road direction and make other objects such as cars or buses pushable by the player). Then I created an infinite road and filled it with monsters who, when seeing the player, rushed on him. At this point, I still did not have a clear goal for the player, but this is where arcade games helped me. I decided that the goal of the player was to collect as many points as possible by killing the monsters on its path. It worked, the driving which was not easy to play, but fun to master, gave a real sensation of success, BUT the player could still stop and take its time to chase monsters, so it was not really a racing game. In order to fix that, I added killable but infinite monsters which would respawn and always chase the player wherever he was, stopping was not an option anymore.
+
+And here is how I was able to create Darkest Night while listening to Kavinsky.",https://guyfh3ctor.itch.io/darkest-night
 Simulation Of Speed,"level design, unity","This project was meant to use every mean possible to simulate speed.
 ! This is not meant to be a playable game !
 ","Level design, Pitching of speed feedback, Programming of speed feedback",https://guyfh3ctor.itch.io/simulation-of-speed
