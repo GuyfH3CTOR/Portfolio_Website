@@ -15,8 +15,29 @@ Penitence,"gamedev, unity, c#, game design, pixel art","Embark on a journey of p
 Datamass,"gamedev, unity, c#, game design, system design","Destroy your friends with superweapons in DATAMASS.
 DATAMASS is inspired by game like Planetary Annihilation : Titans and Total Annihilation.
 Create your own map, with an in game map editor, and play with your friends thanks to Coherence Multiplayer.
-! This is a End of School Personnal Project currently in developement !
-","Solo programming, Prog of local and online multiplayer with coherence plugin, Map editor",
+! This is a End of School Personnal Vertical Slice !
+","I have always been a big fan of the RTS genre, Stronghold Crusader was one of the first games I played on my family computer (it was also the only game we had), and in recent years, I have been a big fan of Planetary Annihilation : Titans. So, I wanted to have a go at the genre with big explosions and total annihilations between players.
+
+While I had the idea of the game in my head, I had the opportunity to take some time all alone at the end of my second year at Brassart game design school to try and create the game. At this point, I only had a few projects made with unity, and all of them were oriented toward narrative driven games. So this was a new challenge with unique systems and multiplayer. 
+
+In order to be able to complete the project, I had to restrict my goals :
+* The game would use the coherence multiplayer plugin for quick implementation (it was not quick). 
+* It would only be a pvp 1v1.
+* No AI enemies.
+* Small maps.
+* And finally I didn’t have enough time to dive into the unity dot system, so i could not use it.
+
+THE MAP
+One of my first steps was to create a map. I wanted something where the player could destroy the environment, however the time didn’t allow me to search for vertex displacement on terrain meshes, so instead i created a quick, simple and absolutely not optimized terrain editor where i could add cubes, edit their properties, and remove them in game and in editor. 
+It actually worked pretty well, and all the map data where stored in a text file, but when making a multiplayer game, both players need to be on the same map, and unfortunately, the coherence multiplayer plugin didn't allow me to share between players large amounts of strings. So when a map created by a player, and stored on his computer was loaded, the map data could not be transferred, and the remote player could not load the map. And while I could have been able to share a smaller amount of strings and load the map on both computers, I didn’t have the time, so I scrapped the idea, and loaded all players on a map I created. 
+The map editor is however still available, even if it cannot be loaded in a game.
+
+UNITS
+a RTS without units isn’t complete. In Datamass, units are either troops, or buildings. Troops can be moved around by selecting them and ordering them around. They are able to attack, hold a position, patrol, and some of them are even able to build buildings. The player can select builder units and order them to build a single or multiple buildings. And similar to PA:T, the player must defend his Datamass, a big and slow commander, who can both build and attack. 
+Each unit also has a billboard for easy identification.FOR OF WARI didn’t want the player to be able to see other players all the time, so enemy units outside the detection range of the player unit were not visible. But this felt incomplete because the terrain didn’t feel hidden, or obscured. So I used a clever shader trick and applied it on all terrain materials. The shader received the location and the range of each player unit and switched the texture on the terrain around them in order to have a lighter color (from grey to blue as an exemple).
+
+CONCLUSION
+In the end, all the essential systems for the game were implemented, and 2 players could play against each other. However, by the time I had to turn in my game as an end of year personnel project and continue to work on my end of school group project, I did not have the time to balance the game and fix many of the minor bugs still laying around. But overall I am pretty happy with what I was able to create in about 1 month as a side project.",
 DYSON SPHERE INITIATIVE,"gamedev, UE5, art","Dyson Sphere Initiative is a small UI project for a idle game, inspired by the game ExoMiner, and made at the end of the 2023 summer to train myself in making UI, using unreal engine 5 widgets.
 ","UI design, Implement the UI in UE5 widgets",
 Summoner's Clash,"gamejam, gamedev, unity, c#, pixel art","Summoner's Clash is a game made for the Ludum Dare 55 Game Jam. Picks cards and find the right combos to destroy your opponent before he does.
