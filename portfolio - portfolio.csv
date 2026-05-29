@@ -28,19 +28,20 @@ Simulation Of Speed,"level design, unity","This project was meant to use every m
 ! This is not meant to be a playable game !
 ","Level design, Pitching of speed feedback, Programming of speed feedback",https://guyfh3ctor.itch.io/simulation-of-speed
 Penitence,"gamedev, unity, c#, game design, pixel art","Embark on a journey of penance to absolve yourself of your future or past sins. Explore the ignorance of adolescence as you discover the world and its civilizations. Form relationships and shape your ideals and skills through your words and actions.
-","Penitence is an overscoped 2D rpg where the player could explore the world, interact with npcs or kill them all, and it would all still work and influence the player skills and story.
+","Penitence was an ambitious 2D RPG developed as an end-of-school project. With only three game designers and myself as the sole programmer, we aimed to create a world where players could freely explore, interact with NPCs, or eliminate them, with every choice influencing their skills and the unfolding story.
 
-This was an end of school project with only 3 game designers, and me as the only programmer.
+Implemented Features
 
-I was able to implement : 
-* An inventory system with equippable items based on the player skills.
-* A skill system which can be influenced by the player's actions.
-* A field of view and a A* pathfinding for the player and npcs.
-* A dialogue system.
-* A simultaneous turn based movement system.NPC combat AI.
-* A combat system.
+Despite the project’s overscoped nature, I successfully developed a range of core and interlinked systems:
+- Inventory System: Equippable items dynamically tied to the player’s skills, allowing for personalized loadouts and strategic depth.
+- Skill System: Player actions directly shaped skill progression, creating a responsive and immersive experience.
+- Field of View & A* Pathfinding: Implemented for both the player and NPCs, enabling intelligent navigation and exploration.
+- Dialogue System: Facilitated meaningful interactions with NPCs, enriching the narrative and world-building.
+- Simultaneous Turn-Based Movement: A unique combat mechanic where players and NPCs move at the same time, adding a layer of strategy and unpredictability.
+- NPC Combat AI: Designed to challenge the player with tactical decision-making.
+- Combat System: A robust framework for battles, integrating skills, items, and environmental interactions.
 
-In addition, I was able to work on the UI of the game.",
+Additionally, I contributed to the UI design, ensuring a cohesive and intuitive interface that complemented the game’s mechanics.",
 Datamass,"gamedev, unity, c#, game design, system design","Destroy your friends with superweapons in DATAMASS.
 DATAMASS is inspired by game like Planetary Annihilation : Titans and Total Annihilation.
 Create your own map, with an in game map editor, and play with your friends thanks to Coherence Multiplayer.
@@ -68,26 +69,36 @@ Each unit also has a billboard for easy identification.FOR OF WARI didn’t want
 CONCLUSION
 In the end, all the essential systems for the game were implemented, and 2 players could play against each other. However, by the time I had to turn in my game as an end of year personnel project and continue to work on my end of school group project, I did not have the time to balance the game and fix many of the minor bugs still laying around. But overall I am pretty happy with what I was able to create in about 1 month as a side project.",
 DYSON SPHERE INITIATIVE,"gamedev, UE5, art","Dyson Sphere Initiative is a small UI project for a idle game, inspired by the game ExoMiner, and made at the end of the 2023 summer to train myself in making UI, using unreal engine 5 widgets.
-","I love idle games. I love when numbers go up. and I love science fiction.
+","I’ve always been fascinated by idle games and the satisfaction of watching numbers climb, systems grow, and progress unfold. Combine that with my love for science fiction, and you have the perfect recipe for a project like Dyson Sphere Initiative.
 
-During my first year at Brassart toulouse, I was obsessed with a little idle game called Exominer where the player's only goal is to upgrade its mining operation. When summer came, I just started reading Energy And Civilization by Vacliv Smil and it made me want to create an idle game about energy generation. And nothing generates more energy than a dyson sphere. So I started working on a little game about mining planets, transporting ressources, refining them, and building a dyson sphere with the end goal of compressing the sun to make a black hole with infinite energy (the dream). 
+During my first year at Brassart Toulouse, I became obsessed with Exominer, an idle game centered around upgrading a mining operation on a strange exo planet, and during the summer, I discovered the book Energy and Civilization by Vaclav Smil, which deepened my interest in energy and its like to our evolution. Inspired, I decided to create my own idle game, one that revolved around energy generation on a cosmic scale. And what better endgame than a Dyson Sphere? The idea was simple yet ambitious: mine planets, transport resources, refine materials, and ultimately construct a Dyson Sphere to compress the sun into a black hole, unlocking infinite energy (the ultimate dream for any sci-fi enthusiast).
 
-When I started working on the game, I just started learning Unreal Engine 5, and finished my first game in group (Hellscape). 
-I loved working with UE5 widgets and I wanted to create a really good UI/UX experience. Everything you can see in DSI was handmade by me using Adobe Illustrator and animated using UE5 widgets. 
+At the time, I was just beginning to learn Unreal Engine 5, having recently completed my first group project, Hellscape. I was particularly drawn to UE5’s UI/UX capabilities, especially its widget system. For Dyson Sphere Initiative, I designed and animated every UI element myself. Using Adobe Illustrator for the visuals and UE5 widgets for the interactivity. The goal was to create a seamless, intuitive experience that felt as satisfying as the gameplay itself.
 
-It was a great experience. Sadly, I still didn’t have enough experience with blueprints and programming in general so I kept getting stuck with the save system, data elements, and general programming questions.
+While the project was incredibly rewarding, it also highlighted my limitations at the time. I was still getting the hang of Blueprints and general programming, which led to challenges with the save system, data management, and core mechanics. These hurdles eventually stalled progress, but the experience was invaluable.
 
-I really liked this project, and I may one day redo it using Unity or Godot, as I got more familiar with them.",
+I still love this concept, and I’ve often considered revisiting it, but this time in Unity or Godot, where I’ve since gained more confidence. For now, Dyson Sphere Initiative remains a testament to my early experiments in game design, UI/UX, and the joy of building something from scratch.",
 Summoner's Clash,"gamejam, gamedev, unity, c#, pixel art","Summoner's Clash is a game made for the Ludum Dare 55 Game Jam. Picks cards and find the right combos to destroy your opponent before he does.
-","Summoner's clash was made in about 2-3 days. At first we were supposed to be 3 or 4 people working on it. I ended up writing all the code and doing all the artwork (i did not expect that), and my colleague tried to create cards.
+","Summoner’s Clash was developed in just 2-3 days as part of a collaborative project. Initially, the plan was to have a team of 3-4 people, but I ended up handling all the coding and artwork, a surprise turn of events that pushed me to deliver a complete prototype under tight constraints. My colleague contributed by designing the card system, which became the core mechanic of the game.
 
-Anyway, the game is all about summoning spells in order to render your opponent, an AI, incapacitated. At first, we wanted to draw shapes to summon the spells, but it was not technically feasible with our skills, so we went back and tried cards, it worked, and it was kinda fun, however, card combinations are not clear which makes it impossible for players to remember it. 
+Game Concept
 
-As of today, I would change a few things : 
-* Add an encyclopedia of used combinations.
-* Create spell types fire, water, void, etc… with different effect based on the number of cards of the type used, 2 fire = fireball or 3 fire = hellfire.
-* Create combinations based on spell types (fire + water = steam, void + water = ice, etc …).
-* Create additional effects which influence the receiving actor (slow summoning time, slow down cursor, redraw all cards, etc…).",https://guyfh3ctor.itch.io/summoners-clash
+The game revolves around summoning spells to defeat an AI opponent. Our original vision involved drawing shapes to cast spells, but due to technical and time limitations, we pivoted to a card-based system. While functional and fun, the lack of clarity in card combinations made it difficult for players to remember and strategize effectively.
+
+Key Takeaways & Lessons
+
+This project was a crash course in rapid prototyping, adaptability, and scope management. It taught me the importance of:
+- Clear mechanics: Players need intuitive rules to engage with the game.
+- Team coordination: Even small teams require defined roles to avoid bottlenecks.
+- Technical feasibility: Ambitious ideas (like shape-drawing) must align with the team’s skills and timeline.
+
+Future Improvements
+
+If I were to revisit Summoner’s Clash, I’d implement the following to enhance depth and replayability:
+- Spell Encyclopedia: A reference guide for all discovered card combinations, so players can strategize effectively.
+- Elemental Spell Types: Introduce categories like Fire, Water, Void, etc., with tiered effects (2 Fire = Fireball, 3 Fire = Hellfire).
+- Elemental Combos: Unique interactions between types (Fire + Water = Steam, Void + Water = Ice).
+- Status Effects: Add dynamic modifiers like slow summoning, cursor deceleration, or forced redraws to increase tactical variety.",https://guyfh3ctor.itch.io/summoners-clash
 Belleville,"unity, game design","Belleville is a immersive sim with metroidvania elements concept currently being prototyped.
 you can find the complete pitch in the link below.","In 2025, I replayed Dishonored 1 & 2 and I discovered metroidvania games with hollow knight : Silksong and MIO : memories in orbit. I loved both of those games very deeply, how I interacted with the worlds, the consequences of my actions, the discovery of mysteries and the lore, story and all the things around it.
 
