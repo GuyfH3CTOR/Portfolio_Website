@@ -614,6 +614,18 @@ html,body{
   border-radius: 100%;
 }
 
+.introduction-title {
+  font-size: 5rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--white-smoke);
+  padding-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .task-title{
   color:var(--yellow);
   font-family: Roboto, sans-serif;
@@ -2463,5 +2475,18 @@ html,body{
   .preview_screen {
     width: 100%;
     padding: 0.5rem;
+  }
+
+  .introduction-title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--white-smoke);
+    margin: 2rem auto;
+    padding-bottom: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 }
